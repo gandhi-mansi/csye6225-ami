@@ -2,10 +2,10 @@
     "variables": {
         "aws_access_key": "",
         "aws_secret_key": "",
-        "aws_region": "",
-        "subnet_id": "",
+        "aws_region": "us-east-1",
+        "subnet_id": "subnet-053db853d6a71e37e",
         "source_ami": "ami-9887c6e7",
-        "ssh_username": "centos"
+        "ssh_username":"centos"
     },
     "builders": [
         {
@@ -19,6 +19,7 @@
             "ssh_username": "{{user `ssh_username`}}",
             "ami_name": "csye6225_{{timestamp}}",
             "ami_description": "centOS AMI for CSYE SUMMER 2019",
+            "associate_public_ip_address": "true", 
             "launch_block_device_mappings": [
                 {
                     "device_name": "/dev/sda1",
