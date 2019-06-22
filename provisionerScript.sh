@@ -13,7 +13,7 @@
     sudo groupadd tomcat
     sudo mkdir /opt/tomcat
     sudo useradd -s /bin/nologin -g tomcat -d /opt/tomcat tomcat
-    exit
+    # exit
 
     sudo yum -y install wget
 
@@ -26,13 +26,18 @@ sudo su
 cd /opt/tomcat
 sudo chgrp -R tomcat conf
 sudo chmod g+rwx conf
-sudo chmod g+r conf/*
+sudo chmod -R g+r conf
 sudo chown -R tomcat logs/ temp/ webapps/ work/
 
 sudo chgrp -R tomcat bin
 sudo chgrp -R tomcat lib
 sudo chmod g+rwx bin
-sudo chmod g+r bin/*
+sudo chmod -R g+r bin
+
+if [ $? -ne 0 ]
+then
+    echo "1-FAILED:^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+fi
 
 echo "[Unit]
 Description=Apache Tomcat Web Application Container
@@ -57,14 +62,30 @@ Group=tomcat
 [Install]
 WantedBy=multi-user.target" | sudo tee -a /etc/systemd/system/tomcat.service
 
-sudo systemctl start tomcat.service
+if [ $? -ne 0 ]
+then
+    echo "2-FAILED:^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+fi
+
+status=$(sudo systemctl start tomcat.service)
+sudo systemctl status tomcat.service
+
+if [ $? -ne 0 ]
+then
+    echo "2-FAILED:^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+    echo $status
+fi
+
 sudo systemctl enable tomcat.service
 
-sudo sed -i '$ d' /usr/share/tomcat/conf/tomcat-users.xml
-sudo sed -i '$ d' /usr/share/tomcat/conf/tomcat-users.xml
+sudo sed -i '$ d' /opt/tomcat/conf/tomcat-users.xml
+sudo sed -i '$ d' /opt/tomcat/conf/tomcat-users.xml
 sudo echo "<role rolename=\"manager-gui\"/>
         <user username=\"manager\" password=\"manager\" roles=\"manager-gui\"/>
         </tomcat-users>" | sudo tee -a /opt/tomcat/conf/tomcat-users.xml
 sudo systemctl restart tomcat.service
 
-/opt/tomcat/webapps/
+sudo systemctl stop tomcat.service
+sudo rm -rf /opt/tomcat/webapps/*
+sudo rm -rf /opt/tomcat/work/*
+sudo systemctl start tomcat.service
