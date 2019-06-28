@@ -77,4 +77,6 @@
     sudo rm -rf /opt/tomcat/work/*
     sudo ls /opt/tomcat/webapps
 
-    sudo systemctl start tomcat.service
+    sudo yum install git
+
+    # sudo systemctl stop tomcat.service
