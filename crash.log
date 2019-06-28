@@ -1,0 +1,1595 @@
+2019/06/22 05:59:44 [INFO] Packer version: 1.4.1
+2019/06/22 05:59:44 Packer Target OS/Arch: linux amd64
+2019/06/22 05:59:44 Built with Go Version: go1.12.5
+2019/06/22 05:59:44 Detected home directory from env var: /home/cyrilsebastian
+2019/06/22 05:59:44 Using internal plugin for lxc
+2019/06/22 05:59:44 Using internal plugin for vmware-iso
+2019/06/22 05:59:44 Using internal plugin for azure-arm
+2019/06/22 05:59:44 Using internal plugin for digitalocean
+2019/06/22 05:59:44 Using internal plugin for oneandone
+2019/06/22 05:59:44 Using internal plugin for profitbricks
+2019/06/22 05:59:44 Using internal plugin for scaleway
+2019/06/22 05:59:44 Using internal plugin for triton
+2019/06/22 05:59:44 Using internal plugin for hcloud
+2019/06/22 05:59:44 Using internal plugin for hyperv-iso
+2019/06/22 05:59:44 Using internal plugin for qemu
+2019/06/22 05:59:44 Using internal plugin for tencentcloud-cvm
+2019/06/22 05:59:44 Using internal plugin for virtualbox-iso
+2019/06/22 05:59:44 Using internal plugin for amazon-ebssurrogate
+2019/06/22 05:59:44 Using internal plugin for cloudstack
+2019/06/22 05:59:44 Using internal plugin for ncloud
+2019/06/22 05:59:44 Using internal plugin for oracle-classic
+2019/06/22 05:59:44 Using internal plugin for alicloud-ecs
+2019/06/22 05:59:44 Using internal plugin for amazon-instance
+2019/06/22 05:59:44 Using internal plugin for file
+2019/06/22 05:59:44 Using internal plugin for lxd
+2019/06/22 05:59:44 Using internal plugin for null
+2019/06/22 05:59:44 Using internal plugin for oracle-oci
+2019/06/22 05:59:44 Using internal plugin for vagrant
+2019/06/22 05:59:44 Using internal plugin for vmware-vmx
+2019/06/22 05:59:44 Using internal plugin for amazon-ebs
+2019/06/22 05:59:44 Using internal plugin for amazon-ebsvolume
+2019/06/22 05:59:44 Using internal plugin for googlecompute
+2019/06/22 05:59:44 Using internal plugin for openstack
+2019/06/22 05:59:44 Using internal plugin for hyperone
+2019/06/22 05:59:44 Using internal plugin for hyperv-vmcx
+2019/06/22 05:59:44 Using internal plugin for linode
+2019/06/22 05:59:44 Using internal plugin for parallels-iso
+2019/06/22 05:59:44 Using internal plugin for parallels-pvm
+2019/06/22 05:59:44 Using internal plugin for proxmox
+2019/06/22 05:59:44 Using internal plugin for virtualbox-ovf
+2019/06/22 05:59:44 Using internal plugin for amazon-chroot
+2019/06/22 05:59:44 Using internal plugin for docker
+2019/06/22 05:59:44 Using internal plugin for yandex
+2019/06/22 05:59:44 Using internal plugin for ansible
+2019/06/22 05:59:44 Using internal plugin for chef-solo
+2019/06/22 05:59:44 Using internal plugin for windows-restart
+2019/06/22 05:59:44 Using internal plugin for breakpoint
+2019/06/22 05:59:44 Using internal plugin for chef-client
+2019/06/22 05:59:44 Using internal plugin for inspec
+2019/06/22 05:59:44 Using internal plugin for puppet-server
+2019/06/22 05:59:44 Using internal plugin for salt-masterless
+2019/06/22 05:59:44 Using internal plugin for shell-local
+2019/06/22 05:59:44 Using internal plugin for sleep
+2019/06/22 05:59:44 Using internal plugin for ansible-local
+2019/06/22 05:59:44 Using internal plugin for converge
+2019/06/22 05:59:44 Using internal plugin for file
+2019/06/22 05:59:44 Using internal plugin for puppet-masterless
+2019/06/22 05:59:44 Using internal plugin for shell
+2019/06/22 05:59:44 Using internal plugin for powershell
+2019/06/22 05:59:44 Using internal plugin for windows-shell
+2019/06/22 05:59:44 Using internal plugin for vsphere-template
+2019/06/22 05:59:44 Using internal plugin for digitalocean-import
+2019/06/22 05:59:44 Using internal plugin for docker-push
+2019/06/22 05:59:44 Using internal plugin for docker-tag
+2019/06/22 05:59:44 Using internal plugin for vagrant-cloud
+2019/06/22 05:59:44 Using internal plugin for compress
+2019/06/22 05:59:44 Using internal plugin for manifest
+2019/06/22 05:59:44 Using internal plugin for vagrant
+2019/06/22 05:59:44 Using internal plugin for shell-local
+2019/06/22 05:59:44 Using internal plugin for vsphere
+2019/06/22 05:59:44 Using internal plugin for artifice
+2019/06/22 05:59:44 Using internal plugin for docker-save
+2019/06/22 05:59:44 Using internal plugin for googlecompute-import
+2019/06/22 05:59:44 Using internal plugin for docker-import
+2019/06/22 05:59:44 Using internal plugin for googlecompute-export
+2019/06/22 05:59:44 Using internal plugin for alicloud-import
+2019/06/22 05:59:44 Using internal plugin for amazon-import
+2019/06/22 05:59:44 Using internal plugin for checksum
+2019/06/22 05:59:44 Detected home directory from env var: /home/cyrilsebastian
+2019/06/22 05:59:44 Attempting to open config file: /home/cyrilsebastian/.packerconfig
+2019/06/22 05:59:44 [WARN] Config file doesn't exist: /home/cyrilsebastian/.packerconfig
+2019/06/22 05:59:44 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[alicloud-ecs:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-alicloud-ecs amazon-chroot:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-chroot amazon-ebs:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebs amazon-ebssurrogate:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebssurrogate amazon-ebsvolume:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebsvolume amazon-instance:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-instance azure-arm:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-azure-arm cloudstack:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-cloudstack digitalocean:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-digitalocean docker:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-docker file:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-file googlecompute:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-googlecompute hcloud:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hcloud hyperone:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperone hyperv-iso:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-iso hyperv-vmcx:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-vmcx linode:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-linode lxc:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxc lxd:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxd ncloud:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-ncloud null:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-null oneandone:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oneandone openstack:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-openstack oracle-classic:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-classic oracle-oci:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-oci parallels-iso:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-iso parallels-pvm:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-pvm profitbricks:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-profitbricks proxmox:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-proxmox qemu:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-qemu scaleway:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-scaleway tencentcloud-cvm:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-tencentcloud-cvm triton:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-triton vagrant:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vagrant virtualbox-iso:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-iso virtualbox-ovf:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-ovf vmware-iso:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-iso vmware-vmx:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-vmx yandex:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-yandex] PostProcessors:map[alicloud-import:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-alicloud-import amazon-import:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-amazon-import artifice:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-artifice checksum:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-checksum compress:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-compress digitalocean-import:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-digitalocean-import docker-import:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-import docker-push:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-push docker-save:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-save docker-tag:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-tag googlecompute-export:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-googlecompute-export googlecompute-import:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-googlecompute-import manifest:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-manifest shell-local:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-shell-local vagrant:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant vagrant-cloud:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant-cloud vsphere:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere vsphere-template:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere-template] Provisioners:map[ansible:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible ansible-local:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible-local breakpoint:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-breakpoint chef-client:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-client chef-solo:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-solo converge:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-converge file:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-file inspec:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-inspec powershell:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-powershell puppet-masterless:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-masterless puppet-server:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-server salt-masterless:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-salt-masterless shell:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell shell-local:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell-local sleep:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-sleep windows-restart:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-restart windows-shell:/usr/local/packer/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-shell]}
+2019/06/22 05:59:44 Detected home directory from env var: /home/cyrilsebastian
+2019/06/22 05:59:44 Setting cache directory: /home/cyrilsebastian/Desktop/csye6225/dev/csye6225-su19-ami/packer_cache
+2019/06/22 05:59:44 Detected home directory from env var: /home/cyrilsebastian
+2019/06/22 05:59:44 [ERR] Checkpoint error: EOF
+2019/06/22 05:59:44 Loading builder: amazon-ebs
+2019/06/22 05:59:44 Plugin could not be found. Checking same directory as executable.
+2019/06/22 05:59:44 Current exe path: /usr/local/packer/packer
+2019/06/22 05:59:44 Creating plugin client for path: /usr/local/packer/packer
+2019/06/22 05:59:44 Starting plugin: /usr/local/packer/packer []string{"/usr/local/packer/packer", "plugin", "packer-builder-amazon-ebs"}
+2019/06/22 05:59:44 Waiting for RPC address for: /usr/local/packer/packer
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 [INFO] Packer version: 1.4.1
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Packer Target OS/Arch: linux amd64
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Built with Go Version: go1.12.5
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Detected home directory from env var: /home/cyrilsebastian
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Attempting to open config file: /home/cyrilsebastian/.packerconfig
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 [WARN] Config file doesn't exist: /home/cyrilsebastian/.packerconfig
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Detected home directory from env var: /home/cyrilsebastian
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Setting cache directory: /home/cyrilsebastian/Desktop/csye6225/dev/csye6225-su19-ami/packer_cache
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 args: []string{"packer-builder-amazon-ebs"}
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Plugin minimum port: 10000
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Plugin maximum port: 25000
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Plugin address: unix /tmp/packer-plugin014962302
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Waiting for connection...
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Detected home directory from env var: /home/cyrilsebastian
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 [ERR] Checkpoint error: EOF
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Serving a plugin connection...
+2019/06/22 05:59:44 Loading provisioner: shell
+2019/06/22 05:59:44 Plugin could not be found. Checking same directory as executable.
+2019/06/22 05:59:44 Current exe path: /usr/local/packer/packer
+2019/06/22 05:59:44 Creating plugin client for path: /usr/local/packer/packer
+2019/06/22 05:59:44 Starting plugin: /usr/local/packer/packer []string{"/usr/local/packer/packer", "plugin", "packer-provisioner-shell"}
+2019/06/22 05:59:44 Waiting for RPC address for: /usr/local/packer/packer
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 [INFO] Packer version: 1.4.1
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Packer Target OS/Arch: linux amd64
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Built with Go Version: go1.12.5
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Detected home directory from env var: /home/cyrilsebastian
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Attempting to open config file: /home/cyrilsebastian/.packerconfig
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 [WARN] Config file doesn't exist: /home/cyrilsebastian/.packerconfig
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Detected home directory from env var: /home/cyrilsebastian
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Setting cache directory: /home/cyrilsebastian/Desktop/csye6225/dev/csye6225-su19-ami/packer_cache
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 args: []string{"packer-provisioner-shell"}
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Plugin minimum port: 10000
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Plugin maximum port: 25000
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Detected home directory from env var: /home/cyrilsebastian
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 [ERR] Checkpoint error: EOF
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Plugin address: unix /tmp/packer-plugin943934062
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Waiting for connection...
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Serving a plugin connection...
+2019/06/22 05:59:44 ui: [1;32mamazon-ebs output will be in this color.[0m
+2019/06/22 05:59:44 ui: 
+2019/06/22 05:59:44 Build debug mode: false
+2019/06/22 05:59:44 Force build: false
+2019/06/22 05:59:44 On error: 
+2019/06/22 05:59:44 Preparing build: amazon-ebs
+2019/06/22 05:59:44 Waiting on builds to complete...
+2019/06/22 05:59:44 Starting build run: amazon-ebs
+2019/06/22 05:59:44 Running builder: amazon-ebs
+2019/06/22 05:59:44 [INFO] (telemetry) Starting builder amazon-ebs
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 Found region us-east-1
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 [INFO] AWS Auth provider used: "SharedConfigCredentials: /home/cyrilsebastian/.aws/credentials"
+2019/06/22 05:59:44 packer: 2019/06/22 05:59:44 [INFO] (aws): No AWS timeout and polling overrides have been set. Packer will default to waiter-specific delays and timeouts. If you would like to customize the length of time between retries and max number of retries you may do so by setting the environment variables AWS_POLL_DELAY_SECONDS and AWS_MAX_ATTEMPTS to your desired values.
+2019/06/22 05:59:44 ui: [1;32m==> amazon-ebs: Prevalidating AMI Name: csye6225_1561197584[0m
+2019/06/22 05:59:46 packer: 2019/06/22 05:59:46 Using AMI Filters {
+2019/06/22 05:59:46 packer:   ImageIds: ["ami-9887c6e7"]
+2019/06/22 05:59:46 packer: }
+2019/06/22 05:59:46 ui: [0;32m    amazon-ebs: Found Image ID: ami-9887c6e7[0m
+2019/06/22 05:59:46 ui: [1;32m==> amazon-ebs: Creating temporary keypair: packer_5d0dfc10-eb50-3d2a-797c-87526b1c081a[0m
+2019/06/22 05:59:46 ui: [1;32m==> amazon-ebs: Creating temporary security group for this instance: packer_5d0dfc12-473f-7e39-0788-8f725749448a[0m
+2019/06/22 05:59:47 packer: 2019/06/22 05:59:47 [DEBUG] Waiting for temporary security group: sg-0bd29be3d6a0dd5d8
+2019/06/22 05:59:47 packer: 2019/06/22 05:59:47 [DEBUG] Found security group sg-0bd29be3d6a0dd5d8
+2019/06/22 05:59:47 ui: [1;32m==> amazon-ebs: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...[0m
+2019/06/22 05:59:47 ui: [1;32m==> amazon-ebs: Launching a source AWS instance...[0m
+2019/06/22 05:59:47 ui: [1;32m==> amazon-ebs: Adding tags to source instance[0m
+2019/06/22 05:59:47 ui: [0;32m    amazon-ebs: Adding tag: "Name": "Packer Builder"[0m
+2019/06/22 05:59:49 ui: [0;32m    amazon-ebs: Instance ID: i-042d2d0368d8561f3[0m
+2019/06/22 05:59:49 ui: [1;32m==> amazon-ebs: Waiting for instance (i-042d2d0368d8561f3) to become ready...[0m
+2019/06/22 06:00:21 packer: 2019/06/22 06:00:21 [INFO] Not using winrm communicator, skipping get password...
+2019/06/22 06:00:21 ui: [1;32m==> amazon-ebs: Using ssh communicator to connect: 54.234.147.122[0m
+2019/06/22 06:00:21 ui: [1;32m==> amazon-ebs: Waiting for SSH to become available...[0m
+2019/06/22 06:00:21 packer: 2019/06/22 06:00:21 [INFO] Waiting for SSH, up to timeout: 5m0s
+2019/06/22 06:00:32 packer: 2019/06/22 06:00:32 [DEBUG] TCP connection to SSH ip/port failed: dial tcp 54.234.147.122:22: connect: connection refused
+2019/06/22 06:00:37 packer: 2019/06/22 06:00:37 [INFO] Attempting SSH connection to 54.234.147.122:22...
+2019/06/22 06:00:37 packer: 2019/06/22 06:00:37 [DEBUG] Config to &ssh.Config{SSHConfig:(*ssh.ClientConfig)(0xc0003a9040), Connection:(func() (net.Conn, error))(0x1133370), Pty:false, DisableAgentForwarding:false, HandshakeTimeout:0, UseSftp:false, KeepAliveInterval:5000000000, Timeout:0}...
+2019/06/22 06:00:37 packer: 2019/06/22 06:00:37 [DEBUG] reconnecting to TCP connection for SSH
+2019/06/22 06:00:37 packer: 2019/06/22 06:00:37 [DEBUG] handshaking with SSH
+2019/06/22 06:00:37 packer: 2019/06/22 06:00:37 [DEBUG] handshake complete!
+2019/06/22 06:00:37 packer: 2019/06/22 06:00:37 [DEBUG] Opening new ssh session
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [INFO] agent forwarding enabled
+2019/06/22 06:00:38 ui: [1;32m==> amazon-ebs: Connected to SSH![0m
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 Running the provision hook
+2019/06/22 06:00:38 [INFO] (telemetry) Starting provisioner shell
+2019/06/22 06:00:38 ui: [1;32m==> amazon-ebs: Provisioning with shell script: provisionerScript.sh[0m
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 Opening provisionerScript.sh for reading
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [INFO] 3106 bytes written for 'uploadData'
+2019/06/22 06:00:38 [INFO] 3106 bytes written for 'uploadData'
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [DEBUG] Opening new ssh session
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [DEBUG] Starting remote scp process:  scp -vt /tmp
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [DEBUG] Started SCP session, beginning transfers...
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [DEBUG] Copying input data into temporary file so we can read the length
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [DEBUG] scp: Uploading script_7652.sh: perms=C0644 size=3106
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [DEBUG] SCP session complete, closing stdin pipe.
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [DEBUG] Waiting for SSH session to complete.
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [DEBUG] scp stderr (length 32): Sink: C0644 3106 script_7652.sh
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [DEBUG] Opening new ssh session
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [DEBUG] starting remote command: chmod 0755 /tmp/script_7652.sh
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [INFO] RPC endpoint: Communicator ended with: 0
+2019/06/22 06:00:38 [INFO] RPC client: Communicator ended with: 0
+2019/06/22 06:00:38 [INFO] RPC endpoint: Communicator ended with: 0
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [INFO] RPC client: Communicator ended with: 0
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [DEBUG] Opening new ssh session
+2019/06/22 06:00:38 packer: 2019/06/22 06:00:38 [DEBUG] starting remote command: chmod +x /tmp/script_7652.sh; PACKER_BUILDER_TYPE='amazon-ebs' PACKER_BUILD_NAME='amazon-ebs'  /tmp/script_7652.sh
+2019/06/22 06:00:38 ui: [0;32m    amazon-ebs: Loaded plugins: fastestmirror[0m
+2019/06/22 06:00:38 ui: [0;32m    amazon-ebs: Determining fastest mirrors[0m
+2019/06/22 06:00:39 ui: [0;32m    amazon-ebs:  * base: repos-va.psychz.net[0m
+2019/06/22 06:00:39 ui: [0;32m    amazon-ebs:  * extras: repos-va.psychz.net[0m
+2019/06/22 06:00:39 ui: [0;32m    amazon-ebs:  * updates: repos-va.psychz.net[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: Resolving Dependencies[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Running transaction check[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package java-11-openjdk-devel.x86_64 1:11.0.3.7-0.el7_6 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: java-11-openjdk(x86-64) = 1:11.0.3.7-0.el7_6 for package: 1:java-11-openjdk-devel-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Running transaction check[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package java-11-openjdk.x86_64 1:11.0.3.7-0.el7_6 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: java-11-openjdk-headless(x86-64) = 1:11.0.3.7-0.el7_6 for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: xorg-x11-fonts-Type1 for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libpng15.so.15(PNG15_0)(64bit) for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libjpeg.so.62(LIBJPEG_6.2)(64bit) for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: fontconfig(x86-64) for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libpng15.so.15()(64bit) for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libjvm.so()(64bit) for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libjpeg.so.62()(64bit) for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libjava.so()(64bit) for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libgif.so.4()(64bit) for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libXtst.so.6()(64bit) for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libXrender.so.1()(64bit) for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libXi.so.6()(64bit) for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libXext.so.6()(64bit) for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libX11.so.6()(64bit) for package: 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Running transaction check[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package fontconfig.x86_64 0:2.13.0-4.3.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: freetype >= 2.8-7 for package: fontconfig-2.13.0-4.3.el7.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: fontpackages-filesystem for package: fontconfig-2.13.0-4.3.el7.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: dejavu-sans-fonts for package: fontconfig-2.13.0-4.3.el7.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package giflib.x86_64 0:4.1.6-9.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libSM.so.6()(64bit) for package: giflib-4.1.6-9.el7.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libICE.so.6()(64bit) for package: giflib-4.1.6-9.el7.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package java-11-openjdk-headless.x86_64 1:11.0.3.7-0.el7_6 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: tzdata-java >= 2015d for package: 1:java-11-openjdk-headless-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: copy-jdk-configs >= 3.3 for package: 1:java-11-openjdk-headless-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: lksctp-tools(x86-64) for package: 1:java-11-openjdk-headless-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libasound.so.2(ALSA_0.9.0rc4)(64bit) for package: 1:java-11-openjdk-headless-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libasound.so.2(ALSA_0.9)(64bit) for package: 1:java-11-openjdk-headless-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: javapackages-tools for package: 1:java-11-openjdk-headless-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libasound.so.2()(64bit) for package: 1:java-11-openjdk-headless-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libX11.x86_64 0:1.6.5-2.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libX11-common >= 1.6.5-2.el7 for package: libX11-1.6.5-2.el7.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libxcb.so.1()(64bit) for package: libX11-1.6.5-2.el7.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libXext.x86_64 0:1.3.3-3.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libXi.x86_64 0:1.7.9-1.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libXrender.x86_64 0:0.9.10-1.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libXtst.x86_64 0:1.2.3-1.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libjpeg-turbo.x86_64 0:1.2.90-6.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libpng.x86_64 2:1.5.13-7.el7_2 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package xorg-x11-fonts-Type1.noarch 0:7.5-9.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: ttmkfdir for package: xorg-x11-fonts-Type1-7.5-9.el7.noarch[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: ttmkfdir for package: xorg-x11-fonts-Type1-7.5-9.el7.noarch[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: mkfontdir for package: xorg-x11-fonts-Type1-7.5-9.el7.noarch[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: mkfontdir for package: xorg-x11-fonts-Type1-7.5-9.el7.noarch[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Running transaction check[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package alsa-lib.x86_64 0:1.1.6-2.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package copy-jdk-configs.noarch 0:3.3-10.el7_5 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package dejavu-sans-fonts.noarch 0:2.33-6.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: dejavu-fonts-common = 2.33-6.el7 for package: dejavu-sans-fonts-2.33-6.el7.noarch[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package fontpackages-filesystem.noarch 0:1.44-8.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package freetype.x86_64 0:2.4.11-15.el7 will be updated[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package freetype.x86_64 0:2.8-12.el7_6.1 will be an update[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package javapackages-tools.noarch 0:3.4.1-11.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: python-javapackages = 3.4.1-11.el7 for package: javapackages-tools-3.4.1-11.el7.noarch[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libxslt for package: javapackages-tools-3.4.1-11.el7.noarch[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libICE.x86_64 0:1.0.9-9.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libSM.x86_64 0:1.2.2-2.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libX11-common.noarch 0:1.6.5-2.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libxcb.x86_64 0:1.13-1.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libXau.so.6()(64bit) for package: libxcb-1.13-1.el7.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package lksctp-tools.x86_64 0:1.0.17-2.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package ttmkfdir.x86_64 0:3.0.9-42.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package tzdata-java.noarch 0:2019a-1.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package xorg-x11-font-utils.x86_64 1:7.5-21.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: libfontenc.so.1()(64bit) for package: 1:xorg-x11-font-utils-7.5-21.el7.x86_64[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Running transaction check[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package dejavu-fonts-common.noarch 0:2.33-6.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libXau.x86_64 0:1.0.8-2.1.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libfontenc.x86_64 0:1.1.3-3.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package libxslt.x86_64 0:1.1.28-5.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package python-javapackages.noarch 0:3.4.1-11.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Processing Dependency: python-lxml for package: python-javapackages-3.4.1-11.el7.noarch[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Running transaction check[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ---> Package python-lxml.x86_64 0:3.2.1-4.el7 will be installed[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: --> Finished Dependency Resolution[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: Dependencies Resolved[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ================================================================================[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  Package                     Arch      Version                 Repository  Size[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ================================================================================[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: Installing:[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  java-11-openjdk-devel       x86_64    1:11.0.3.7-0.el7_6      updates    3.3 M[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: Installing for dependencies:[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  alsa-lib                    x86_64    1.1.6-2.el7             base       424 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  copy-jdk-configs            noarch    3.3-10.el7_5            base        21 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  dejavu-fonts-common         noarch    2.33-6.el7              base        64 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  dejavu-sans-fonts           noarch    2.33-6.el7              base       1.4 M[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  fontconfig                  x86_64    2.13.0-4.3.el7          base       254 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  fontpackages-filesystem     noarch    1.44-8.el7              base       9.9 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  giflib                      x86_64    4.1.6-9.el7             base        40 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  java-11-openjdk             x86_64    1:11.0.3.7-0.el7_6      updates    194 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  java-11-openjdk-headless    x86_64    1:11.0.3.7-0.el7_6      updates     38 M[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  javapackages-tools          noarch    3.4.1-11.el7            base        73 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libICE                      x86_64    1.0.9-9.el7             base        66 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libSM                       x86_64    1.2.2-2.el7             base        39 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libX11                      x86_64    1.6.5-2.el7             base       606 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libX11-common               noarch    1.6.5-2.el7             base       164 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libXau                      x86_64    1.0.8-2.1.el7           base        29 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libXext                     x86_64    1.3.3-3.el7             base        39 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libXi                       x86_64    1.7.9-1.el7             base        40 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libXrender                  x86_64    0.9.10-1.el7            base        26 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libXtst                     x86_64    1.2.3-1.el7             base        20 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libfontenc                  x86_64    1.1.3-3.el7             base        31 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libjpeg-turbo               x86_64    1.2.90-6.el7            base       134 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libpng                      x86_64    2:1.5.13-7.el7_2        base       213 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libxcb                      x86_64    1.13-1.el7              base       214 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  libxslt                     x86_64    1.1.28-5.el7            base       242 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  lksctp-tools                x86_64    1.0.17-2.el7            base        88 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  python-javapackages         noarch    3.4.1-11.el7            base        31 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  python-lxml                 x86_64    3.2.1-4.el7             base       758 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  ttmkfdir                    x86_64    3.0.9-42.el7            base        48 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  tzdata-java                 noarch    2019a-1.el7             updates    187 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  xorg-x11-font-utils         x86_64    1:7.5-21.el7            base       104 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  xorg-x11-fonts-Type1        noarch    7.5-9.el7               base       521 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: Updating for dependencies:[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:  freetype                    x86_64    2.8-12.el7_6.1          updates    380 k[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: Transaction Summary[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: ================================================================================[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: Install  1 Package  (+31 Dependent packages)[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: Upgrade             (  1 Dependent package)[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: Total download size: 48 M[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: Downloading packages:[0m
+2019/06/22 06:00:42 ui: [0;32m    amazon-ebs: Delta RPMs disabled because /usr/bin/applydeltarpm not installed.[0m
+2019/06/22 06:00:43 ui error: [1;31m==> amazon-ebs: warning: /var/cache/yum/x86_64/7/base/packages/copy-jdk-configs-3.3-10.el7_5.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY[0m
+2019/06/22 06:00:43 ui: [0;32m    amazon-ebs: Public key for copy-jdk-configs-3.3-10.el7_5.noarch.rpm is not installed[0m
+2019/06/22 06:00:43 ui: [0;32m    amazon-ebs: Public key for java-11-openjdk-11.0.3.7-0.el7_6.x86_64.rpm is not installed[0m
+2019/06/22 06:00:44 ui error: [1;31m==> amazon-ebs: Importing GPG key 0xF4A80EB5:[0m
+2019/06/22 06:00:44 ui error: [1;31m==> amazon-ebs:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"[0m
+2019/06/22 06:00:44 ui error: [1;31m==> amazon-ebs:  Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5[0m
+2019/06/22 06:00:44 ui: [0;32m    amazon-ebs: --------------------------------------------------------------------------------[0m
+2019/06/22 06:00:44 ui: [0;32m    amazon-ebs: Total                                               36 MB/s |  48 MB  00:01[0m
+2019/06/22 06:00:44 ui: [0;32m    amazon-ebs: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7[0m
+2019/06/22 06:00:44 ui error: [1;31m==> amazon-ebs:  Package    : centos-release-7-5.1804.el7.centos.2.x86_64 (installed)[0m
+2019/06/22 06:00:44 ui error: [1;31m==> amazon-ebs:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7[0m
+2019/06/22 06:00:44 ui: [0;32m    amazon-ebs: Running transaction check[0m
+2019/06/22 06:00:44 ui: [0;32m    amazon-ebs: Running transaction test[0m
+2019/06/22 06:00:44 ui: [0;32m    amazon-ebs: Transaction test succeeded[0m
+2019/06/22 06:00:44 ui: [0;32m    amazon-ebs: Running transaction[0m
+2019/06/22 06:00:44 ui: [0;32m    amazon-ebs:   Installing : libxslt-1.1.28-5.el7.x86_64                                 1/34[0m
+2019/06/22 06:00:44 ui: [0;32m    amazon-ebs:   Installing : libjpeg-turbo-1.2.90-6.el7.x86_64                           2/34[0m
+2019/06/22 06:00:44 ui: [0;32m    amazon-ebs:   Installing : fontpackages-filesystem-1.44-8.el7.noarch                   3/34[0m
+2019/06/22 06:00:45 ui: [0;32m    amazon-ebs:   Installing : libICE-1.0.9-9.el7.x86_64                                   4/34[0m
+2019/06/22 06:00:45 ui: [0;32m    amazon-ebs:   Installing : 2:libpng-1.5.13-7.el7_2.x86_64                              5/34[0m
+2019/06/22 06:00:45 ui: [0;32m    amazon-ebs:   Updating   : freetype-2.8-12.el7_6.1.x86_64                              6/34[0m
+2019/06/22 06:00:45 ui: [0;32m    amazon-ebs:   Installing : ttmkfdir-3.0.9-42.el7.x86_64                                7/34[0m
+2019/06/22 06:00:45 ui: [0;32m    amazon-ebs:   Installing : libSM-1.2.2-2.el7.x86_64                                    8/34[0m
+2019/06/22 06:00:45 ui: [0;32m    amazon-ebs:   Installing : dejavu-fonts-common-2.33-6.el7.noarch                       9/34[0m
+2019/06/22 06:00:45 ui: [0;32m    amazon-ebs:   Installing : dejavu-sans-fonts-2.33-6.el7.noarch                        10/34[0m
+2019/06/22 06:00:46 ui: [0;32m    amazon-ebs:   Installing : fontconfig-2.13.0-4.3.el7.x86_64                           11/34[0m
+2019/06/22 06:00:46 ui: [0;32m    amazon-ebs:   Installing : python-lxml-3.2.1-4.el7.x86_64                             12/34[0m
+2019/06/22 06:00:46 ui: [0;32m    amazon-ebs:   Installing : python-javapackages-3.4.1-11.el7.noarch                    13/34[0m
+2019/06/22 06:00:46 ui: [0;32m    amazon-ebs:   Installing : javapackages-tools-3.4.1-11.el7.noarch                     14/34[0m
+2019/06/22 06:00:46 ui: [0;32m    amazon-ebs:   Installing : libfontenc-1.1.3-3.el7.x86_64                              15/34[0m
+2019/06/22 06:00:46 ui: [0;32m    amazon-ebs:   Installing : 1:xorg-x11-font-utils-7.5-21.el7.x86_64                    16/34[0m
+2019/06/22 06:00:47 ui: [0;32m    amazon-ebs:   Installing : xorg-x11-fonts-Type1-7.5-9.el7.noarch                      17/34[0m
+2019/06/22 06:00:47 ui: [0;32m    amazon-ebs:   Installing : libX11-common-1.6.5-2.el7.noarch                           18/34[0m
+2019/06/22 06:00:47 ui: [0;32m    amazon-ebs:   Installing : libXau-1.0.8-2.1.el7.x86_64                                19/34[0m
+2019/06/22 06:00:47 ui: [0;32m    amazon-ebs:   Installing : libxcb-1.13-1.el7.x86_64                                   20/34[0m
+2019/06/22 06:00:47 ui: [0;32m    amazon-ebs:   Installing : libX11-1.6.5-2.el7.x86_64                                  21/34[0m
+2019/06/22 06:00:47 ui: [0;32m    amazon-ebs:   Installing : libXext-1.3.3-3.el7.x86_64                                 22/34[0m
+2019/06/22 06:00:47 ui: [0;32m    amazon-ebs:   Installing : libXi-1.7.9-1.el7.x86_64                                   23/34[0m
+2019/06/22 06:00:47 ui: [0;32m    amazon-ebs:   Installing : libXtst-1.2.3-1.el7.x86_64                                 24/34[0m
+2019/06/22 06:00:47 ui: [0;32m    amazon-ebs:   Installing : giflib-4.1.6-9.el7.x86_64                                  25/34[0m
+2019/06/22 06:00:47 ui: [0;32m    amazon-ebs:   Installing : libXrender-0.9.10-1.el7.x86_64                             26/34[0m
+2019/06/22 06:00:47 ui: [0;32m    amazon-ebs:   Installing : tzdata-java-2019a-1.el7.noarch                             27/34[0m
+2019/06/22 06:00:48 ui: [0;32m    amazon-ebs:   Installing : lksctp-tools-1.0.17-2.el7.x86_64                           28/34[0m
+2019/06/22 06:00:48 ui: [0;32m    amazon-ebs:   Installing : alsa-lib-1.1.6-2.el7.x86_64                                29/34[0m
+2019/06/22 06:00:53 ui: [0;32m    amazon-ebs:   Installing : copy-jdk-configs-3.3-10.el7_5.noarch                       30/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Installing : 1:java-11-openjdk-headless-11.0.3.7-0.el7_6.x86_64         31/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Installing : 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64                  32/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Installing : 1:java-11-openjdk-devel-11.0.3.7-0.el7_6.x86_64            33/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Cleanup    : freetype-2.4.11-15.el7.x86_64                              34/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : libXext-1.3.3-3.el7.x86_64                                  1/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : libXi-1.7.9-1.el7.x86_64                                    2/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : fontconfig-2.13.0-4.3.el7.x86_64                            3/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : giflib-4.1.6-9.el7.x86_64                                   4/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : libXrender-0.9.10-1.el7.x86_64                              5/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : 1:xorg-x11-font-utils-7.5-21.el7.x86_64                     6/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : python-lxml-3.2.1-4.el7.x86_64                              7/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : 2:libpng-1.5.13-7.el7_2.x86_64                              8/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : libICE-1.0.9-9.el7.x86_64                                   9/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : fontpackages-filesystem-1.44-8.el7.noarch                  10/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : ttmkfdir-3.0.9-42.el7.x86_64                               11/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : libjpeg-turbo-1.2.90-6.el7.x86_64                          12/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : copy-jdk-configs-3.3-10.el7_5.noarch                       13/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : python-javapackages-3.4.1-11.el7.noarch                    14/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : dejavu-fonts-common-2.33-6.el7.noarch                      15/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : alsa-lib-1.1.6-2.el7.x86_64                                16/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : libXtst-1.2.3-1.el7.x86_64                                 17/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : libxcb-1.13-1.el7.x86_64                                   18/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : lksctp-tools-1.0.17-2.el7.x86_64                           19/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : xorg-x11-fonts-Type1-7.5-9.el7.noarch                      20/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : libxslt-1.1.28-5.el7.x86_64                                21/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : libX11-1.6.5-2.el7.x86_64                                  22/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : dejavu-sans-fonts-2.33-6.el7.noarch                        23/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : tzdata-java-2019a-1.el7.noarch                             24/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : 1:java-11-openjdk-11.0.3.7-0.el7_6.x86_64                  25/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : javapackages-tools-3.4.1-11.el7.noarch                     26/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : libXau-1.0.8-2.1.el7.x86_64                                27/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : 1:java-11-openjdk-devel-11.0.3.7-0.el7_6.x86_64            28/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : libSM-1.2.2-2.el7.x86_64                                   29/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : libX11-common-1.6.5-2.el7.noarch                           30/34[0m
+2019/06/22 06:00:54 ui: [0;32m    amazon-ebs:   Verifying  : freetype-2.8-12.el7_6.1.x86_64                             31/34[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   Verifying  : libfontenc-1.1.3-3.el7.x86_64                              32/34[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   Verifying  : 1:java-11-openjdk-headless-11.0.3.7-0.el7_6.x86_64         33/34[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   Verifying  : freetype-2.4.11-15.el7.x86_64                              34/34[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Installed:[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   java-11-openjdk-devel.x86_64 1:11.0.3.7-0.el7_6[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Dependency Installed:[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   alsa-lib.x86_64 0:1.1.6-2.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   copy-jdk-configs.noarch 0:3.3-10.el7_5[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   dejavu-fonts-common.noarch 0:2.33-6.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   dejavu-sans-fonts.noarch 0:2.33-6.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   fontconfig.x86_64 0:2.13.0-4.3.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   fontpackages-filesystem.noarch 0:1.44-8.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   giflib.x86_64 0:4.1.6-9.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   java-11-openjdk.x86_64 1:11.0.3.7-0.el7_6[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   java-11-openjdk-headless.x86_64 1:11.0.3.7-0.el7_6[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   javapackages-tools.noarch 0:3.4.1-11.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libICE.x86_64 0:1.0.9-9.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libSM.x86_64 0:1.2.2-2.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libX11.x86_64 0:1.6.5-2.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libX11-common.noarch 0:1.6.5-2.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libXau.x86_64 0:1.0.8-2.1.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libXext.x86_64 0:1.3.3-3.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libXi.x86_64 0:1.7.9-1.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libXrender.x86_64 0:0.9.10-1.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libXtst.x86_64 0:1.2.3-1.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libfontenc.x86_64 0:1.1.3-3.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libjpeg-turbo.x86_64 0:1.2.90-6.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libpng.x86_64 2:1.5.13-7.el7_2[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libxcb.x86_64 0:1.13-1.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   libxslt.x86_64 0:1.1.28-5.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   lksctp-tools.x86_64 0:1.0.17-2.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   python-javapackages.noarch 0:3.4.1-11.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   python-lxml.x86_64 0:3.2.1-4.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   ttmkfdir.x86_64 0:3.0.9-42.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   tzdata-java.noarch 0:2019a-1.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   xorg-x11-font-utils.x86_64 1:7.5-21.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   xorg-x11-fonts-Type1.noarch 0:7.5-9.el7[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Dependency Updated:[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:   freetype.x86_64 0:2.8-12.el7_6.1[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Complete![0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.3.7-0.el7_6.x86_64[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lib/jvm/java-11-openjdk-11.0.3.7-0.el7_6.x86_64/bin[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: export CLASSPATH=.:/usr/lib/jvm/java-11-openjdk-11.0.3.7-0.el7_6.x86_64/jre/lib:/usr/lib/jvm/java-11-openjdk-11.0.3.7-0.el7_6.x86_64/lib:/usr/lib/jvm/java-11-openjdk-11.0.3.7-0.el7_6.x86_64/lib/tools.jar[0m
+2019/06/22 06:00:55 ui error: [1;31m==> amazon-ebs: useradd: warning: the home directory already exists.[0m
+2019/06/22 06:00:55 ui error: [1;31m==> amazon-ebs: Not copying any file from skel directory into it.[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Loaded plugins: fastestmirror[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Loading mirror speeds from cached hostfile[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:  * base: repos-va.psychz.net[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:  * extras: repos-va.psychz.net[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:  * updates: repos-va.psychz.net[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Resolving Dependencies[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: --> Running transaction check[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: ---> Package wget.x86_64 0:1.14-18.el7_6.1 will be installed[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: --> Finished Dependency Resolution[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Dependencies Resolved[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: ================================================================================[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:  Package       Arch            Version                   Repository        Size[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: ================================================================================[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Installing:[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:  wget          x86_64          1.14-18.el7_6.1           updates          547 k[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Transaction Summary[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: ================================================================================[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Install  1 Package[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Total download size: 547 k[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Installed size: 2.0 M[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Downloading packages:[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Running transaction check[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Running transaction test[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Transaction test succeeded[0m
+2019/06/22 06:00:55 ui: [0;32m    amazon-ebs: Running transaction[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs:   Installing : wget-1.14-18.el7_6.1.x86_64                                  1/1[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs:   Verifying  : wget-1.14-18.el7_6.1.x86_64                                  1/1[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: Installed:[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs:   wget.x86_64 0:1.14-18.el7_6.1[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: Complete![0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs: --2019-06-22 10:00:55--  http://apache.mirrors.pair.com/tomcat/tomcat-9/v9.0.21/bin/apache-tomcat-9.0.21.tar.gz[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs: Resolving apache.mirrors.pair.com (apache.mirrors.pair.com)... 216.92.2.131[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs: Connecting to apache.mirrors.pair.com (apache.mirrors.pair.com)|216.92.2.131|:80... connected.[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs: HTTP request sent, awaiting response... 200 OK[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs: Length: 10874669 (10M) [application/x-gzip][0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs: Saving to: ‘apache-tomcat-9.0.21.tar.gz’[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:      0K .......... .......... .......... .......... ..........  0% 2.65M 4s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:     50K .......... .......... .......... .......... ..........  0% 5.34M 3s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    100K .......... .......... .......... .......... ..........  1% 42.3M 2s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    150K .......... .......... .......... .......... ..........  1% 50.2M 2s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    200K .......... .......... .......... .......... ..........  2% 5.87M 2s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    250K .......... .......... .......... .......... ..........  2% 45.9M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    300K .......... .......... .......... .......... ..........  3% 44.4M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    350K .......... .......... .......... .......... ..........  3% 43.5M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    400K .......... .......... .......... .......... ..........  4% 8.15M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    450K .......... .......... .......... .......... ..........  4% 48.5M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    500K .......... .......... .......... .......... ..........  5% 48.3M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    550K .......... .......... .......... .......... ..........  5% 44.4M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    600K .......... .......... .......... .......... ..........  6% 43.9M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    650K .......... .......... .......... .......... ..........  6% 48.3M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    700K .......... .......... .......... .......... ..........  7% 43.6M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    750K .......... .......... .......... .......... ..........  7% 46.2M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    800K .......... .......... .......... .......... ..........  8% 34.5M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    850K .......... .......... .......... .......... ..........  8% 26.0M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    900K .......... .......... .......... .......... ..........  8% 44.9M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:    950K .......... .......... .......... .......... ..........  9% 51.0M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1000K .......... .......... .......... .......... ..........  9% 49.1M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1050K .......... .......... .......... .......... .......... 10% 51.3M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1100K .......... .......... .......... .......... .......... 10% 46.9M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1150K .......... .......... .......... .......... .......... 11% 43.1M 1s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1200K .......... .......... .......... .......... .......... 11% 48.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1250K .......... .......... .......... .......... .......... 12% 26.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1300K .......... .......... .......... .......... .......... 12% 39.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1350K .......... .......... .......... .......... .......... 13% 44.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1400K .......... .......... .......... .......... .......... 13% 44.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1450K .......... .......... .......... .......... .......... 14% 48.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1500K .......... .......... .......... .......... .......... 14% 48.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1550K .......... .......... .......... .......... .......... 15% 46.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1600K .......... .......... .......... .......... .......... 15% 46.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1650K .......... .......... .......... .......... .......... 16% 46.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1700K .......... .......... .......... .......... .......... 16% 30.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1750K .......... .......... .......... .......... .......... 16% 42.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1800K .......... .......... .......... .......... .......... 17% 40.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1850K .......... .......... .......... .......... .......... 17% 38.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1900K .......... .......... .......... .......... .......... 18% 54.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   1950K .......... .......... .......... .......... .......... 18% 38.6M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2000K .......... .......... .......... .......... .......... 19% 50.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2050K .......... .......... .......... .......... .......... 19% 49.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2100K .......... .......... .......... .......... .......... 20% 50.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2150K .......... .......... .......... .......... .......... 20% 48.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2200K .......... .......... .......... .......... .......... 21% 46.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2250K .......... .......... .......... .......... .......... 21% 43.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2300K .......... .......... .......... .......... .......... 22% 45.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2350K .......... .......... .......... .......... .......... 22% 51.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2400K .......... .......... .......... .......... .......... 23% 45.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2450K .......... .......... .......... .......... .......... 23% 50.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2500K .......... .......... .......... .......... .......... 24% 50.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2550K .......... .......... .......... .......... .......... 24% 43.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2600K .......... .......... .......... .......... .......... 24% 43.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2650K .......... .......... .......... .......... .......... 25% 51.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2700K .......... .......... .......... .......... .......... 25% 51.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2750K .......... .......... .......... .......... .......... 26% 48.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2800K .......... .......... .......... .......... .......... 26% 51.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2850K .......... .......... .......... .......... .......... 27% 50.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2900K .......... .......... .......... .......... .......... 27% 46.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   2950K .......... .......... .......... .......... .......... 28% 50.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3000K .......... .......... .......... .......... .......... 28% 49.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3050K .......... .......... .......... .......... .......... 29% 52.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3100K .......... .......... .......... .......... .......... 29% 40.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3150K .......... .......... .......... .......... .......... 30% 45.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3200K .......... .......... .......... .......... .......... 30% 38.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3250K .......... .......... .......... .......... .......... 31% 53.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3300K .......... .......... .......... .......... .......... 31% 50.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3350K .......... .......... .......... .......... .......... 32% 47.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3400K .......... .......... .......... .......... .......... 32% 51.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3450K .......... .......... .......... .......... .......... 32% 52.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3500K .......... .......... .......... .......... .......... 33% 43.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3550K .......... .......... .......... .......... .......... 33% 54.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3600K .......... .......... .......... .......... .......... 34% 49.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3650K .......... .......... .......... .......... .......... 34% 48.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3700K .......... .......... .......... .......... .......... 35% 52.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3750K .......... .......... .......... .......... .......... 35% 48.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3800K .......... .......... .......... .......... .......... 36% 50.6M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3850K .......... .......... .......... .......... .......... 36% 46.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3900K .......... .......... .......... .......... .......... 37% 48.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   3950K .......... .......... .......... .......... .......... 37% 50.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4000K .......... .......... .......... .......... .......... 38% 51.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4050K .......... .......... .......... .......... .......... 38% 51.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4100K .......... .......... .......... .......... .......... 39% 47.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4150K .......... .......... .......... .......... .......... 39% 44.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4200K .......... .......... .......... .......... .......... 40% 48.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4250K .......... .......... .......... .......... .......... 40% 51.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4300K .......... .......... .......... .......... .......... 40% 50.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4350K .......... .......... .......... .......... .......... 41% 48.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4400K .......... .......... .......... .......... .......... 41% 52.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4450K .......... .......... .......... .......... .......... 42% 48.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4500K .......... .......... .......... .......... .......... 42% 48.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4550K .......... .......... .......... .......... .......... 43% 52.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4600K .......... .......... .......... .......... .......... 43% 49.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4650K .......... .......... .......... .......... .......... 44% 49.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4700K .......... .......... .......... .......... .......... 44% 47.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4750K .......... .......... .......... .......... .......... 45% 49.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4800K .......... .......... .......... .......... .......... 45% 42.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4850K .......... .......... .......... .......... .......... 46% 45.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4900K .......... .......... .......... .......... .......... 46% 42.6M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   4950K .......... .......... .......... .......... .......... 47% 40.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5000K .......... .......... .......... .......... .......... 47% 45.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5050K .......... .......... .......... .......... .......... 48% 50.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5100K .......... .......... .......... .......... .......... 48% 42.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5150K .......... .......... .......... .......... .......... 48% 51.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5200K .......... .......... .......... .......... .......... 49% 50.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5250K .......... .......... .......... .......... .......... 49% 52.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5300K .......... .......... .......... .......... .......... 50% 50.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5350K .......... .......... .......... .......... .......... 50% 48.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5400K .......... .......... .......... .......... .......... 51% 50.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5450K .......... .......... .......... .......... .......... 51% 45.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5500K .......... .......... .......... .......... .......... 52% 47.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5550K .......... .......... .......... .......... .......... 52% 49.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5600K .......... .......... .......... .......... .......... 53% 52.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5650K .......... .......... .......... .......... .......... 53% 52.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5700K .......... .......... .......... .......... .......... 54% 41.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5750K .......... .......... .......... .......... .......... 54% 56.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5800K .......... .......... .......... .......... .......... 55% 56.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5850K .......... .......... .......... .......... .......... 55% 53.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5900K .......... .......... .......... .......... .......... 56% 49.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   5950K .......... .......... .......... .......... .......... 56% 55.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6000K .......... .......... .......... .......... .......... 56% 51.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6050K .......... .......... .......... .......... .......... 57% 57.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6100K .......... .......... .......... .......... .......... 57% 54.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6150K .......... .......... .......... .......... .......... 58% 52.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6200K .......... .......... .......... .......... .......... 58% 55.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6250K .......... .......... .......... .......... .......... 59% 58.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6300K .......... .......... .......... .......... .......... 59% 44.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6350K .......... .......... .......... .......... .......... 60% 58.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6400K .......... .......... .......... .......... .......... 60% 56.6M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6450K .......... .......... .......... .......... .......... 61% 56.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6500K .......... .......... .......... .......... .......... 61% 56.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6550K .......... .......... .......... .......... .......... 62% 46.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6600K .......... .......... .......... .......... .......... 62% 46.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6650K .......... .......... .......... .......... .......... 63% 37.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6700K .......... .......... .......... .......... .......... 63% 44.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6750K .......... .......... .......... .......... .......... 64% 43.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6800K .......... .......... .......... .......... .......... 64% 39.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6850K .......... .......... .......... .......... .......... 64% 56.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6900K .......... .......... .......... .......... .......... 65% 57.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   6950K .......... .......... .......... .......... .......... 65% 52.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7000K .......... .......... .......... .......... .......... 66% 48.6M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7050K .......... .......... .......... .......... .......... 66% 57.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7100K .......... .......... .......... .......... .......... 67% 54.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7150K .......... .......... .......... .......... .......... 67% 56.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7200K .......... .......... .......... .......... .......... 68% 57.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7250K .......... .......... .......... .......... .......... 68% 53.6M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7300K .......... .......... .......... .......... .......... 69% 56.6M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7350K .......... .......... .......... .......... .......... 69% 48.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7400K .......... .......... .......... .......... .......... 70% 49.6M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7450K .......... .......... .......... .......... .......... 70% 45.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7500K .......... .......... .......... .......... .......... 71% 47.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7550K .......... .......... .......... .......... .......... 71% 51.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7600K .......... .......... .......... .......... .......... 72% 48.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7650K .......... .......... .......... .......... .......... 72% 46.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7700K .......... .......... .......... .......... .......... 72% 47.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7750K .......... .......... .......... .......... .......... 73% 18.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7800K .......... .......... .......... .......... .......... 73%  317M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7850K .......... .......... .......... .......... .......... 74%  133M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7900K .......... .......... .......... .......... .......... 74% 45.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   7950K .......... .......... .......... .......... .......... 75% 45.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8000K .......... .......... .......... .......... .......... 75% 40.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8050K .......... .......... .......... .......... .......... 76% 40.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8100K .......... .......... .......... .......... .......... 76% 40.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8150K .......... .......... .......... .......... .......... 77% 49.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8200K .......... .......... .......... .......... .......... 77% 48.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8250K .......... .......... .......... .......... .......... 78% 39.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8300K .......... .......... .......... .......... .......... 78% 43.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8350K .......... .......... .......... .......... .......... 79% 40.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8400K .......... .......... .......... .......... .......... 79% 32.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8450K .......... .......... .......... .......... .......... 80% 50.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8500K .......... .......... .......... .......... .......... 80% 42.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8550K .......... .......... .......... .......... .......... 80% 45.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8600K .......... .......... .......... .......... .......... 81% 41.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8650K .......... .......... .......... .......... .......... 81% 40.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8700K .......... .......... .......... .......... .......... 82% 44.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8750K .......... .......... .......... .......... .......... 82% 46.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8800K .......... .......... .......... .......... .......... 83% 41.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8850K .......... .......... .......... .......... .......... 83% 48.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8900K .......... .......... .......... .......... .......... 84% 48.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   8950K .......... .......... .......... .......... .......... 84% 42.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9000K .......... .......... .......... .......... .......... 85% 49.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9050K .......... .......... .......... .......... .......... 85% 46.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9100K .......... .......... .......... .......... .......... 86% 40.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9150K .......... .......... .......... .......... .......... 86% 42.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9200K .......... .......... .......... .......... .......... 87% 44.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9250K .......... .......... .......... .......... .......... 87% 46.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9300K .......... .......... .......... .......... .......... 88% 45.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9350K .......... .......... .......... .......... .......... 88% 38.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9400K .......... .......... .......... .......... .......... 88% 43.6M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9450K .......... .......... .......... .......... .......... 89% 46.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9500K .......... .......... .......... .......... .......... 89% 43.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9550K .......... .......... .......... .......... .......... 90% 47.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9600K .......... .......... .......... .......... .......... 90% 48.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9650K .......... .......... .......... .......... .......... 91% 50.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9700K .......... .......... .......... .......... .......... 91% 49.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9750K .......... .......... .......... .......... .......... 92% 43.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9800K .......... .......... .......... .......... .......... 92% 38.0M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9850K .......... .......... .......... .......... .......... 93% 42.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9900K .......... .......... .......... .......... .......... 93% 49.3M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:   9950K .......... .......... .......... .......... .......... 94% 46.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:  10000K .......... .......... .......... .......... .......... 94% 41.2M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:  10050K .......... .......... .......... .......... .......... 95% 42.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:  10100K .......... .......... .......... .......... .......... 95% 44.6M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:  10150K .......... .......... .......... .......... .......... 96% 44.4M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:  10200K .......... .......... .......... .......... .......... 96% 43.5M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:  10250K .......... .......... .......... .......... .......... 96% 47.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:  10300K .......... .......... .......... .......... .......... 97% 49.7M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:  10350K .......... .......... .......... .......... .......... 97% 50.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:  10400K .......... .......... .......... .......... .......... 98% 42.8M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:  10450K .......... .......... .......... .......... .......... 98% 42.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:  10500K .......... .......... .......... .......... .......... 99% 46.1M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:  10550K .......... .......... .......... .......... .......... 99% 43.9M 0s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:  10600K .......... .........                                  100% 44.0M=0.3s[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs: 2019-06-22 10:00:55 (39.8 MB/s) - ‘apache-tomcat-9.0.21.tar.gz’ saved [10874669/10874669][0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs:[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/conf/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/conf/catalina.policy[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/conf/catalina.properties[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/conf/context.xml[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/conf/jaspic-providers.xml[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/conf/jaspic-providers.xsd[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/conf/logging.properties[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/conf/server.xml[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/conf/tomcat-users.xml[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/conf/tomcat-users.xsd[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/conf/web.xml[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/logs/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/temp/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/WEB-INF/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/api/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/docs/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/src/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/src/mypackage/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/web/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/web/WEB-INF/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/web/images/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/architecture/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/architecture/requestProcess/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/architecture/startup/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/elapi/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/funcspecs/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/fonts/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/jspapi/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/servletapi/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/tribes/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/websocketapi/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/cal/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/checkbox/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/colors/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/compressionFilters/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/dates/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/error/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/examples/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/filters/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/http2/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/el/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/listeners/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/nonblocking/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/num/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/sessions/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/trailers/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/util/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/validators/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/chat/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/snake/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/jsp/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/jsp2/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/jsp/applet/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/lib/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/tags/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/async/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/cal/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/checkbox/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/colors/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/dates/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/error/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/forward/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/images/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/include/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspattribute/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspx/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/misc/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/tagfiles/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsptoserv/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/num/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/plugin/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/plugin/applet/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/security/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/security/protected/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/sessions/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/simpletag/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/snp/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/tagplugin/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/xml/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/images/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/nonblocking/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/websocket/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/META-INF/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/WEB-INF/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/WEB-INF/jsp/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/images/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/META-INF/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/WEB-INF/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/WEB-INF/jsp/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/images/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/work/[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/BUILDING.txt[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/CONTRIBUTING.md[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/LICENSE[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/NOTICE[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/README.md[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/RELEASE-NOTES[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/RUNNING.txt[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/bootstrap.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/catalina-tasks.xml[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/catalina.bat[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/ciphers.bat[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/commons-daemon-native.tar.gz[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/commons-daemon.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/configtest.bat[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/digest.bat[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/makebase.bat[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/setclasspath.bat[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/shutdown.bat[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/startup.bat[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/tomcat-juli.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/tomcat-native.tar.gz[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/tool-wrapper.bat[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/version.bat[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/annotations-api.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/catalina-ant.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/catalina-ha.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/catalina-storeconfig.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/catalina-tribes.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/catalina.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/ecj-4.10.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/el-api.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/jasper-el.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/jasper.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/jaspic-api.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/jsp-api.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/servlet-api.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-api.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-coyote.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-dbcp.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-i18n-cs.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-i18n-de.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-i18n-es.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-i18n-fr.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-i18n-ja.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-i18n-ko.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-i18n-pt-BR.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-i18n-ru.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-i18n-zh-CN.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-jdbc.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-jni.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-util-scan.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-util.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/tomcat-websocket.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/lib/websocket-api.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/temp/safeToDelete.tmp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/RELEASE-NOTES.txt[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/web.xml[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/asf-logo-wide.svg[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/bg-button.png[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/bg-middle.png[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/bg-nav.png[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/bg-upper.png[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/favicon.ico[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/index.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/tomcat-power.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/tomcat.css[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/tomcat.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/tomcat.png[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/ROOT/tomcat.svg[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/BUILDING.txt[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/RELEASE-NOTES.txt[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/RUNNING.txt[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/WEB-INF/web.xml[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/aio.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/api/index.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/build.xml.txt[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/deployment.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/index.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/installation.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/introduction.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/processes.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/build.xml[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/docs/README.txt[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/index.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/sample.war[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/src/mypackage/Hello.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/web/WEB-INF/web.xml[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/web/hello.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/web/images/tomcat.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/sample/web/index.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/source.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/appdev/web.xml.txt[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/apr.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/architecture/index.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/architecture/overview.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/architecture/requestProcess.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/architecture/requestProcess/authentication-process.png[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/architecture/requestProcess/request-process.png[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/architecture/startup.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/architecture/startup/serverStartup.pdf[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/architecture/startup/serverStartup.txt[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/balancer-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/building.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/cgi-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/changelog.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/class-loader-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/cluster-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/comments.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/ajp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/automatic-deployment.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/cluster-channel.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/cluster-deployer.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/cluster-interceptor.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/cluster-listener.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/cluster-manager.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/cluster-membership.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/cluster-receiver.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/cluster-sender.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/cluster-valve.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/cluster.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/context.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/cookie-processor.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/credentialhandler.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/engine.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/executor.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/filter.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/globalresources.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/host.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/http.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/http2.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/index.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/jar-scan-filter.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/jar-scanner.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/jaspic.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/listeners.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/loader.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/manager.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/realm.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/resources.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/server.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/service.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/sessionidgenerator.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/systemprops.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/config/valve.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/connectors.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/default-servlet.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/deployer-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/developers.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/elapi/index.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/extras.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/funcspecs/fs-admin-apps.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/funcspecs/fs-admin-objects.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/funcspecs/fs-admin-opers.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/funcspecs/fs-default.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/funcspecs/fs-jdbc-realm.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/funcspecs/fs-jndi-realm.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/funcspecs/fs-memory-realm.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/funcspecs/index.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/funcspecs/mbean-names.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/host-manager-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/html-host-manager-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/html-manager-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/add.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/asf-logo.svg[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/code.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/cors-flowchart.png[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/design.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/docs-stylesheet.css[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/docs.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/fix.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/fonts/OpenSans400.woff[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/fonts/OpenSans400italic.woff[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/fonts/OpenSans600.woff[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/fonts/OpenSans600italic.woff[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/fonts/OpenSans700.woff[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/fonts/OpenSans700italic.woff[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/fonts/fonts.css[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/tomcat.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/tomcat.png[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/update.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/images/void.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/index.html[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs: /tmp/script_7652.sh: line 26: cd: /opt/tomcat/webapps: Permission denied[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/introduction.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/jasper-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/jdbc-pool.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/jndi-datasource-examples-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/jndi-resources-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/jspapi/index.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/logging.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/manager-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/maven-jars.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/mbeans-descriptors-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/mbeans-descriptors.dtd[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/monitoring.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/proxy-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/realm-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/rewrite.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/security-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/security-manager-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/servletapi/index.html[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs: /tmp/script_7652.sh: line 29: cd: work: No such file or directory[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/setup.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/ssi-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/ssl-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/tribes/developers.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/tribes/faq.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/tribes/interceptors.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/tribes/introduction.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/tribes/membership.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/tribes/setup.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/tribes/status.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/tribes/transport.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/virtual-hosting-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/web-socket-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/websocketapi/index.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/windows-auth-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/docs/windows-service-howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/CookieExample.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/CookieExample.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/HelloWorldExample.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/HelloWorldExample.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/LocalStrings.properties[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/LocalStrings_cs.properties[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/LocalStrings_de.properties[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/LocalStrings_es.properties[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/LocalStrings_fr.properties[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/LocalStrings_ja.properties[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/LocalStrings_ko.properties[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/LocalStrings_pt.properties[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/LocalStrings_pt_BR.properties[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/LocalStrings_ru.properties[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/LocalStrings_zh_CN.properties[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/RequestHeaderExample.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/RequestHeaderExample.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/RequestInfoExample.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/RequestInfoExample.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/RequestParamExample.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/RequestParamExample.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/ServletToJsp.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/ServletToJsp.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/SessionExample.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/SessionExample.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Async0$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Async0.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Async0.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Async1$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Async1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Async1.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Async2$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Async2.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Async2.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Async3.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Async3.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/AsyncStockContextListener.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/AsyncStockContextListener.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/AsyncStockServlet.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/AsyncStockServlet.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Stockticker$Stock.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Stockticker$TickListener.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Stockticker.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/async/Stockticker.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/cal/Entries.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/cal/Entries.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/cal/Entry.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/cal/Entry.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/cal/JspCalendar.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/cal/JspCalendar.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/cal/TableBean.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/cal/TableBean.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/checkbox/CheckTest.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/checkbox/CheckTest.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/colors/ColorGameBean.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/colors/ColorGameBean.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/compressionFilters/CompressionFilter.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/compressionFilters/CompressionFilter.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/compressionFilters/CompressionFilterTestServlet.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/compressionFilters/CompressionFilterTestServlet.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/compressionFilters/CompressionResponseStream.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/compressionFilters/CompressionResponseStream.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/compressionFilters/CompressionServletResponseWrapper.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/compressionFilters/CompressionServletResponseWrapper.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/dates/JspCalendar.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/dates/JspCalendar.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/error/Smart.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/error/Smart.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/examples/ExampleTagBase.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/examples/ExampleTagBase.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/examples/FooTag.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/examples/FooTag.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/examples/FooTagExtraInfo.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/examples/FooTagExtraInfo.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/examples/LogTag.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/examples/LogTag.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/examples/ValuesTag.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/examples/ValuesTag.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/filters/ExampleFilter.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/filters/ExampleFilter.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/http2/SimpleImagePush.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/http2/SimpleImagePush.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/BookBean.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/BookBean.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/FooBean.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/FooBean.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/ValuesBean.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/ValuesBean.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/el/Functions.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/el/Functions.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/EchoAttributesTag.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/EchoAttributesTag.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/FindBookSimpleTag.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/FindBookSimpleTag.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/HelloWorldSimpleTag.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/HelloWorldSimpleTag.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/RepeatSimpleTag.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/RepeatSimpleTag.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/ShuffleSimpleTag.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/ShuffleSimpleTag.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/TileSimpleTag.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/TileSimpleTag.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/listeners/ContextListener.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/listeners/ContextListener.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/listeners/SessionListener.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/listeners/SessionListener.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/nonblocking/ByteCounter$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/nonblocking/ByteCounter$CounterListener.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/nonblocking/ByteCounter.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/nonblocking/ByteCounter.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/nonblocking/NumberWriter$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/nonblocking/NumberWriter$NumberWriterListener.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/nonblocking/NumberWriter.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/nonblocking/NumberWriter.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/num/NumberGuessBean.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/num/NumberGuessBean.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/sessions/DummyCart.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/sessions/DummyCart.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/trailers/ResponseTrailers$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/trailers/ResponseTrailers$TrailerFieldSupplier.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/trailers/ResponseTrailers.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/trailers/ResponseTrailers.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/util/CookieFilter.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/util/CookieFilter.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/util/HTMLFilter.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/util/HTMLFilter.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/validators/DebugValidator.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/validators/DebugValidator.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/ExamplesConfig.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/ExamplesConfig.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/chat/ChatAnnotation.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/chat/ChatAnnotation.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/Client$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/Client.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/Client.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawMessage$ParseException.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawMessage.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawMessage.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardContextListener.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardContextListener.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint$2.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint$3$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint$3.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$1$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$2.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$MessageType.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$Player.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/Room.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/Room.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/AbstractWebsocketMessage.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/AbstractWebsocketMessage.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/BinaryWebsocketMessage.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/BinaryWebsocketMessage.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/CloseWebsocketMessage.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/CloseWebsocketMessage.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/StringWebsocketMessage.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/StringWebsocketMessage.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/EchoAnnotation.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/EchoAnnotation.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/EchoAsyncAnnotation$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/EchoAsyncAnnotation$CompletedFuture.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/EchoAsyncAnnotation.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/EchoAsyncAnnotation.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint$EchoMessageHandlerBinary.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint$EchoMessageHandlerText.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/EchoStreamAnnotation.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/EchoStreamAnnotation.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/echo/servers.json[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/snake/Direction.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/snake/Direction.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/snake/Location$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/snake/Location.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/snake/Location.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/snake/Snake.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/snake/Snake.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/snake/SnakeAnnotation.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/snake/SnakeAnnotation.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer$1.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/jsp2/jsp2-example-taglib.tld[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/jsp/applet/Clock2.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/jsp/debug-taglib.tld[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/jsp/example-taglib.tld[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/tags/displayProducts.tag[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/tags/helloWorld.tag[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/tags/panel.tag[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/WEB-INF/web.xml[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/index.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/async/async1.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/async/async1.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/async/async3.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/async/async3.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/async/index.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/async/index.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/cal/Entries.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/cal/Entry.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/cal/JspCalendar.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/cal/TableBean.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/cal/cal1.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/cal/cal1.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/cal/cal2.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/cal/cal2.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/cal/calendar.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/cal/login.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/checkbox/CheckTest.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/checkbox/check.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/checkbox/checkresult.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/checkbox/checkresult.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/checkbox/cresult.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/colors/ColorGameBean.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/colors/clr.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/colors/colors.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/colors/colrs.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/colors/colrs.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/dates/date.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/dates/date.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/dates/date.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/error/er.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/error/err.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/error/err.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/error/error.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/error/errorpge.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/error/errorpge.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/forward/forward.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/forward/forward.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/forward/fwd.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/forward/one.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/forward/one.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/forward/two.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/images/code.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/images/execute.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/images/return.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/include/foo.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/include/foo.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/include/foo.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/include/inc.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/include/include.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/include/include.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/index.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/Functions.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/ValuesBean.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/ValuesTag.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/basic-arithmetic.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/basic-arithmetic.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/basic-arithmetic.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/basic-comparisons.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/basic-comparisons.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/basic-comparisons.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/composite.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/composite.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/composite.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/functions.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/functions.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/functions.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/implicit-objects.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/implicit-objects.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/el/implicit-objects.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspattribute/FooBean.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspattribute/HelloWorldSimpleTag.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspattribute/ShuffleSimpleTag.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspattribute/TileSimpleTag.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspattribute/jspattribute.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspattribute/jspattribute.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspattribute/jspattribute.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspattribute/shuffle.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspattribute/shuffle.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspattribute/shuffle.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspx/basic.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspx/basic.jspx[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspx/basic.jspx.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspx/svgexample.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspx/textRotate.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspx/textRotate.jpg[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspx/textRotate.jspx[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/jspx/textRotate.jspx.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/misc/EchoAttributesTag.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/misc/coda.jspf[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/misc/coda.jspf.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/misc/config.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/misc/config.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/misc/config.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/misc/dynamicattrs.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/misc/dynamicattrs.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/misc/dynamicattrs.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/misc/prelude.jspf[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/misc/prelude.jspf.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/BookBean.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/FindBookSimpleTag.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/Functions.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/HelloWorldSimpleTag.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/RepeatSimpleTag.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/book.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/book.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/book.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/hello.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/hello.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/hello.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/repeat.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/repeat.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/simpletag/repeat.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/tagfiles/displayProducts.tag.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/tagfiles/hello.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/tagfiles/hello.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/tagfiles/hello.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/tagfiles/helloWorld.tag.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/tagfiles/panel.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/tagfiles/panel.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/tagfiles/panel.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/tagfiles/panel.tag.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/tagfiles/products.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/tagfiles/products.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsp2/tagfiles/products.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsptoserv/ServletToJsp.java.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsptoserv/hello.jsp[0m
+2019/06/22 06:00:56 ui error: [1;31m==> amazon-ebs: Created symlink from /etc/systemd/system/multi-user.target.wants/tomcat.service to /etc/systemd/system/tomcat.service.[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsptoserv/hello.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsptoserv/jsptoservlet.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsptoserv/jsptoservlet.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/jsptoserv/jts.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/num/numguess.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/num/numguess.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/num/numguess.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/plugin/applet/Clock2.class[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/plugin/applet/Clock2.java[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/plugin/plugin.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/plugin/plugin.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/plugin/plugin.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/security/protected/error.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/security/protected/error.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/security/protected/index.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/security/protected/index.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/security/protected/login.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/security/protected/login.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/sessions/DummyCart.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/sessions/carts.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/sessions/carts.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/sessions/carts.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/sessions/crt.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/simpletag/foo.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/simpletag/foo.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/simpletag/foo.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/snp/snoop.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/snp/snoop.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/snp/snoop.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/tagplugin/choose.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/tagplugin/choose.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/tagplugin/choose.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/tagplugin/foreach.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/tagplugin/foreach.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/tagplugin/foreach.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/tagplugin/howto.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/tagplugin/if.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/tagplugin/if.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/tagplugin/if.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/tagplugin/notes.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/xml/xml.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/xml/xml.jsp[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/jsp/xml/xml.jsp.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/cookies.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/helloworld.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/images/code.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/images/execute.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/images/return.gif[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/index.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/nonblocking/bytecounter.html[0m
+2019/06/22 06:00:56 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/reqheaders.html[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/reqinfo.html[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/reqparams.html[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/servlets/sessions.html[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/websocket/chat.xhtml[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/websocket/drawboard.xhtml[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/websocket/echo.xhtml[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/websocket/index.xhtml[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/examples/websocket/snake.xhtml[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/META-INF/context.xml[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/WEB-INF/jsp/401.jsp[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/WEB-INF/jsp/403.jsp[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/WEB-INF/jsp/404.jsp[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/WEB-INF/web.xml[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/images/asf-logo.svg[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/images/tomcat.gif[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/index.jsp[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/host-manager/manager.xml[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/META-INF/context.xml[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/WEB-INF/jsp/401.jsp[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/WEB-INF/jsp/403.jsp[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/WEB-INF/jsp/404.jsp[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/WEB-INF/jsp/connectorCerts.jsp[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/WEB-INF/jsp/connectorCiphers.jsp[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/WEB-INF/jsp/connectorTrustedCerts.jsp[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/WEB-INF/jsp/sessionDetail.jsp[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/WEB-INF/jsp/sessionsList.jsp[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/WEB-INF/web.xml[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/images/asf-logo.svg[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/images/tomcat.gif[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/index.jsp[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/status.xsd[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/webapps/manager/xform.xsl[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/catalina.sh[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/ciphers.sh[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/configtest.sh[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/daemon.sh[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/digest.sh[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/makebase.sh[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/setclasspath.sh[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/shutdown.sh[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/startup.sh[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/tool-wrapper.sh[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: apache-tomcat-9.0.21/bin/version.sh[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: [Unit][0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: Description=Apache Tomcat Web Application Container[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: After=syslog.target network.target[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: [Service][0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: Type=forking[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: Environment=JAVA_HOME=/usr/lib/jvm/jre[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: Environment=CATALINA_HOME=/opt/tomcat[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: Environment=CATALINA_BASE=/opt/tomcat[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: Environment='CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC'[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: Environment='JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom'[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: ExecStart=/opt/tomcat/bin/startup.sh[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: ExecStop=/bin/kill -15[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: User=tomcat[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: Group=tomcat[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: [Install][0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: WantedBy=multi-user.target[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: ● tomcat.service - Apache Tomcat Web Application Container[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:    Loaded: loaded (/etc/systemd/system/tomcat.service; disabled; vendor preset: disabled)[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:    Active: active (running) since Sat 2019-06-22 10:00:56 UTC; 34ms ago[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:   Process: 1333 ExecStart=/opt/tomcat/bin/startup.sh (code=exited, status=0/SUCCESS)[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:  Main PID: 1340 (java)[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:    CGroup: /system.slice/tomcat.service[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:            └─1340 /usr/lib/jvm/jre/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Xms512M -Xmx1024M -server -XX:+UseParallelGC -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: Jun 22 10:00:56 ip-172-31-81-3.ec2.internal systemd[1]: Starting Apache Tomcat Web Application Container...[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: Jun 22 10:00:56 ip-172-31-81-3.ec2.internal systemd[1]: Started Apache Tomcat Web Application Container.[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: <role rolename="manager-gui"/>[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:         <user username="manager" password="manager" roles="manager-gui"/>[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs:         </tomcat-users>[0m
+2019/06/22 06:00:57 packer: 2019/06/22 06:00:57 [INFO] RPC endpoint: Communicator ended with: 0
+2019/06/22 06:00:57 [INFO] 17510 bytes written for 'stderr'
+2019/06/22 06:00:57 [INFO] 70933 bytes written for 'stdout'
+2019/06/22 06:00:57 [INFO] RPC client: Communicator ended with: 0
+2019/06/22 06:00:57 [INFO] RPC endpoint: Communicator ended with: 0
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: docs[0m
+2019/06/22 06:00:57 packer: 2019/06/22 06:00:57 [INFO] 17510 bytes written for 'stderr'
+2019/06/22 06:00:57 packer: 2019/06/22 06:00:57 [INFO] 70933 bytes written for 'stdout'
+2019/06/22 06:00:57 packer: 2019/06/22 06:00:57 [INFO] RPC client: Communicator ended with: 0
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: examples[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: host-manager[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: manager[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: ROOT[0m
+2019/06/22 06:00:57 packer: 2019/06/22 06:00:57 [DEBUG] Opening new ssh session
+2019/06/22 06:00:57 packer: 2019/06/22 06:00:57 [DEBUG] starting remote command: rm -f /tmp/script_7652.sh
+2019/06/22 06:00:57 packer: 2019/06/22 06:00:57 [INFO] RPC endpoint: Communicator ended with: 0
+2019/06/22 06:00:57 [INFO] RPC client: Communicator ended with: 0
+2019/06/22 06:00:57 [INFO] RPC endpoint: Communicator ended with: 0
+2019/06/22 06:00:57 packer: 2019/06/22 06:00:57 [INFO] RPC client: Communicator ended with: 0
+2019/06/22 06:00:57 packer: 2019/06/22 06:00:57 [DEBUG] Opening new ssh session
+2019/06/22 06:00:57 packer: 2019/06/22 06:00:57 [DEBUG] starting remote command: rm -f
+2019/06/22 06:00:57 packer: 2019/06/22 06:00:57 [INFO] RPC endpoint: Communicator ended with: 0
+2019/06/22 06:00:57 [INFO] RPC client: Communicator ended with: 0
+2019/06/22 06:00:57 [INFO] RPC endpoint: Communicator ended with: 0
+2019/06/22 06:00:57 packer: 2019/06/22 06:00:57 [INFO] RPC client: Communicator ended with: 0
+2019/06/22 06:00:57 [INFO] (telemetry) ending shell
+2019/06/22 06:00:57 ui: [1;32m==> amazon-ebs: Stopping the source instance...[0m
+2019/06/22 06:00:57 ui: [0;32m    amazon-ebs: Stopping instance[0m
+2019/06/22 06:00:58 ui: [1;32m==> amazon-ebs: Waiting for the instance to stop...[0m
+2019/06/22 06:01:29 ui: [1;32m==> amazon-ebs: Creating AMI csye6225_1561197584 from instance i-042d2d0368d8561f3[0m
+2019/06/22 06:01:29 ui: [0;32m    amazon-ebs: AMI: ami-03339266433d48553[0m
+2019/06/22 06:01:29 ui: [1;32m==> amazon-ebs: Waiting for AMI to become ready...[0m
+2019/06/22 06:31:57 packer: 2019/06/22 06:31:57 Error waiting for AMI: ResourceNotReady: exceeded wait attempts
+2019/06/22 06:31:57 ui: [1;32m==> amazon-ebs: Terminating the source AWS instance...[0m
+2019/06/22 06:31:58 ui: [1;32m==> amazon-ebs: Cleaning up any extra volumes...[0m
+2019/06/22 06:31:58 ui: [1;32m==> amazon-ebs: No volumes to clean up, skipping[0m
+2019/06/22 06:31:58 ui: [1;32m==> amazon-ebs: Deleting temporary security group...[0m
+2019/06/22 06:31:59 packer: 2019/06/22 06:31:59 Error deleting security group: InvalidGroup.NotFound: The security group 'sg-0bd29be3d6a0dd5d8' does not exist
+2019/06/22 06:31:59 packer: 	status code: 400, request id: 722f81db-b923-40a3-8634-c3b7af3d39c7
+2019/06/22 06:32:04 packer: 2019/06/22 06:32:04 Error deleting security group: InvalidGroup.NotFound: The security group 'sg-0bd29be3d6a0dd5d8' does not exist
+2019/06/22 06:32:04 packer: 	status code: 400, request id: dc762ae4-0b5f-41c7-91e9-e59150215654
+2019/06/22 06:32:10 packer: 2019/06/22 06:32:10 Error deleting security group: InvalidGroup.NotFound: The security group 'sg-0bd29be3d6a0dd5d8' does not exist
+2019/06/22 06:32:10 packer: 	status code: 400, request id: b81dcfb5-c939-4e05-8ed1-d1904ad16212
+2019/06/22 06:32:15 packer: 2019/06/22 06:32:15 Error deleting security group: InvalidGroup.NotFound: The security group 'sg-0bd29be3d6a0dd5d8' does not exist
+2019/06/22 06:32:15 packer: 	status code: 400, request id: 34ecebb7-a050-48db-87c3-74eca3713977
+2019/06/22 06:32:20 packer: 2019/06/22 06:32:20 Error deleting security group: InvalidGroup.NotFound: The security group 'sg-0bd29be3d6a0dd5d8' does not exist
+2019/06/22 06:32:20 packer: 	status code: 400, request id: a4c1f7e6-d2b1-49ae-8cdd-29c4d6d72878
+2019/06/22 06:32:25 ui error: [1;31m==> amazon-ebs: Error cleaning up security group. Please delete the group manually: sg-0bd29be3d6a0dd5d8[0m
+2019/06/22 06:32:25 ui: [1;32m==> amazon-ebs: Deleting temporary keypair...[0m
+2019/06/22 06:32:26 packer: panic: runtime error: index out of range
+2019/06/22 06:32:26 packer: 
+2019/06/22 06:32:26 packer: goroutine 128 [running]:
+2019/06/22 06:32:26 packer: github.com/hashicorp/packer/builder/amazon/ebs.(*stepCreateAMI).Run(0xc00038c0a8, 0x3beb220, 0xc000452180, 0x3bc8ae0, 0xc0002c6360, 0x0)
+2019/06/22 06:32:26 packer: 	/Users/azr/go/src/github.com/hashicorp/packer/builder/amazon/ebs/step_create_ami.go:64 +0xfc1
+2019/06/22 06:32:26 packer: github.com/hashicorp/packer/helper/multistep.(*BasicRunner).Run(0xc0002c6480, 0x3beb220, 0xc000452180, 0x3bc8ae0, 0xc0002c6360)
+2019/06/22 06:32:26 packer: 	/Users/azr/go/src/github.com/hashicorp/packer/helper/multistep/basic_runner.go:67 +0x1ec
+2019/06/22 06:32:26 packer: github.com/hashicorp/packer/builder/amazon/ebs.(*Builder).Run(0xc0000a2e00, 0x3beb220, 0xc000452180, 0x3bfb4a0, 0xc0002c45a0, 0x3b82ee0, 0xc0001bbb00, 0x40b9b9, 0xc000386210, 0x30, ...)
+2019/06/22 06:32:26 packer: 	/Users/azr/go/src/github.com/hashicorp/packer/builder/amazon/ebs/builder.go:250 +0x12fa
+2019/06/22 06:32:26 packer: github.com/hashicorp/packer/packer/rpc.(*BuilderServer).Run(0xc0004b7a40, 0x1, 0xc0000521d0, 0x0, 0x0)
+2019/06/22 06:32:26 packer: 	/Users/azr/go/src/github.com/hashicorp/packer/packer/rpc/builder.go:109 +0x231
+2019/06/22 06:32:26 packer: reflect.Value.call(0xc000390300, 0xc00038c068, 0x13, 0x3641306, 0x4, 0xc0000cdf18, 0x3, 0x3, 0xc000096580, 0x0, ...)
+2019/06/22 06:32:26 packer: 	/usr/local/Cellar/go/1.12.5/libexec/src/reflect/value.go:447 +0x461
+2019/06/22 06:32:26 packer: reflect.Value.Call(0xc000390300, 0xc00038c068, 0x13, 0xc000502718, 0x3, 0x3, 0x0, 0x0, 0x0)
+2019/06/22 06:32:26 packer: 	/usr/local/Cellar/go/1.12.5/libexec/src/reflect/value.go:308 +0xa4
+2019/06/22 06:32:26 packer: net/rpc.(*service).call(0xc000452080, 0xc00043a050, 0xc0003b2068, 0xc0003b2070, 0xc0001b0100, 0xc0004809c0, 0x2c329a0, 0xc0000521ac, 0x18a, 0x2b8f440, ...)
+2019/06/22 06:32:26 packer: 	/usr/local/Cellar/go/1.12.5/libexec/src/net/rpc/server.go:384 +0x14e
+2019/06/22 06:32:26 packer: created by net/rpc.(*Server).ServeCodec
+2019/06/22 06:32:26 packer: 	/usr/local/Cellar/go/1.12.5/libexec/src/net/rpc/server.go:481 +0x42b
+2019/06/22 06:32:26 [INFO] (telemetry) ending amazon-ebs
+2019/06/22 06:32:26 ui error: [1;31mBuild 'amazon-ebs' errored: unexpected EOF[0m
+2019/06/22 06:32:26 machine readable: error-count []string{"1"}
+2019/06/22 06:32:26 ui error: 
+==> Some builds didn't complete successfully and had errors:
+2019/06/22 06:32:26 machine readable: amazon-ebs,error []string{"unexpected EOF"}
+2019/06/22 06:32:26 ui error: --> amazon-ebs: unexpected EOF
+2019/06/22 06:32:26 ui: 
+==> Builds finished but no artifacts were created.
+2019/06/22 06:32:26 Cancelling builder after context cancellation context canceled
+2019/06/22 06:32:26 Error cancelling builder: connection is shut down
+2019/06/22 06:32:26 [INFO] (telemetry) Finalizing.
+2019/06/22 06:32:26 /usr/local/packer/packer: plugin process exited
+2019/06/22 06:32:26 waiting for all plugin processes to complete...
+2019/06/22 06:32:26 /usr/local/packer/packer: plugin process exited
