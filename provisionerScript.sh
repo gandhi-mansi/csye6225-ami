@@ -9,83 +9,74 @@
 
 
 # Tomcat-9 Installation and Path Setup
-    sudo su
     sudo groupadd tomcat
     sudo mkdir /opt/tomcat
     sudo useradd -s /bin/nologin -g tomcat -d /opt/tomcat tomcat
-    # exit
 
     sudo yum -y install wget
 
     cd ~
-wget http://apache.mirrors.pair.com/tomcat/tomcat-9/v9.0.21/bin/apache-tomcat-9.0.21.tar.gz
-sudo tar -zxvf apache-tomcat-9.0.21.tar.gz -C /opt/tomcat --strip-components=1
-sudo rm -r apache-tomcat-9.0.21.tar.gz
+    wget http://apache.mirrors.pair.com/tomcat/tomcat-9/v9.0.21/bin/apache-tomcat-9.0.21.tar.gz
+    sudo tar -zxvf apache-tomcat-9.0.21.tar.gz -C /opt/tomcat --strip-components=1
+    sudo rm -r apache-tomcat-9.0.21.tar.gz
 
-sudo su
-cd /opt/tomcat
-sudo chgrp -R tomcat conf
-sudo chmod g+rwx conf
-sudo chmod -R g+r conf
-sudo chown -R tomcat logs/ temp/ webapps/ work/
+    cd /opt/tomcat
+    sudo chgrp -R tomcat conf
+    sudo chmod g+rwx conf
+    sudo chmod -R g+r conf
+    sudo chown -R tomcat logs/ temp/ webapps/ work/
 
-sudo chgrp -R tomcat bin
-sudo chgrp -R tomcat lib
-sudo chmod g+rwx bin
-sudo chmod -R g+r bin
+    sudo chgrp -R tomcat bin
+    sudo chgrp -R tomcat lib
+    sudo chmod g+rwx bin
+    sudo chmod -R g+r bin
 
-if [ $? -ne 0 ]
-then
-    echo "1-FAILED:^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
-fi
+    echo "[Unit]
+    Description=Apache Tomcat Web Application Container
+    After=syslog.target network.target
 
-echo "[Unit]
-Description=Apache Tomcat Web Application Container
-After=syslog.target network.target
+    [Service]
+    Type=forking
 
-[Service]
-Type=forking
+    Environment=JAVA_HOME=/usr/lib/jvm/jre
+    Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid
+    Environment=CATALINA_HOME=/opt/tomcat
+    Environment=CATALINA_BASE=/opt/tomcat
+    Environment='CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC'
+    Environment='JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom'
 
-Environment=JAVA_HOME=/usr/lib/jvm/jre
-Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid
-Environment=CATALINA_HOME=/opt/tomcat
-Environment=CATALINA_BASE=/opt/tomcat
-Environment='CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC'
-Environment='JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom'
+    ExecStart=/opt/tomcat/bin/startup.sh
+    ExecStop=/bin/kill -15 $MAINPID
 
-ExecStart=/opt/tomcat/bin/startup.sh
-ExecStop=/bin/kill -15 $MAINPID
+    User=tomcat
+    Group=tomcat
 
-User=tomcat
-Group=tomcat
+    [Install]
+    WantedBy=multi-user.target" | sudo tee -a /etc/systemd/system/tomcat.service
 
-[Install]
-WantedBy=multi-user.target" | sudo tee -a /etc/systemd/system/tomcat.service
 
-if [ $? -ne 0 ]
-then
-    echo "2-FAILED:^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
-fi
+    # sudo systemctl start tomcat.service
+    sudo systemctl status tomcat.service
 
-status=$(sudo systemctl start tomcat.service)
-sudo systemctl status tomcat.service
+    sudo systemctl enable tomcat.service
 
-if [ $? -ne 0 ]
-then
-    echo "2-FAILED:^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
-    echo $status
-fi
+    sudo sed -i '$ d' /opt/tomcat/conf/tomcat-users.xml
+    sudo sed -i '$ d' /opt/tomcat/conf/tomcat-users.xml
+    sudo echo "<role rolename=\"manager-gui\"/>
+            <user username=\"manager\" password=\"manager\" roles=\"manager-gui\"/>
+            </tomcat-users>" | sudo tee -a /opt/tomcat/conf/tomcat-users.xml
+    # sudo systemctl restart tomcat.service
 
-sudo systemctl enable tomcat.service
+    # sudo systemctl stop tomcat.service
 
-sudo sed -i '$ d' /opt/tomcat/conf/tomcat-users.xml
-sudo sed -i '$ d' /opt/tomcat/conf/tomcat-users.xml
-sudo echo "<role rolename=\"manager-gui\"/>
-        <user username=\"manager\" password=\"manager\" roles=\"manager-gui\"/>
-        </tomcat-users>" | sudo tee -a /opt/tomcat/conf/tomcat-users.xml
-sudo systemctl restart tomcat.service
+    sudo systemctl status tomcat.service
+    sudo su
+    sudo chmod -R 777 webapps
+    sudo chmod -R 777 work
+    sudo rm -rf /opt/tomcat/webapps/*
+    sudo rm -rf /opt/tomcat/work/*
+    sudo ls /opt/tomcat/webapps
 
-sudo systemctl stop tomcat.service
-sudo rm -rf /opt/tomcat/webapps/*
-sudo rm -rf /opt/tomcat/work/*
-sudo systemctl start tomcat.service
+    sudo yum install git
+
+    # sudo systemctl stop tomcat.service
