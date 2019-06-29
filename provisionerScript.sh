@@ -77,8 +77,9 @@
     sudo rm -rf /opt/tomcat/work/*
     sudo ls /opt/tomcat/webapps
 
-    # sudo yum -y install git
-    # sudo yum -y install maven
+    sudo yum -y install git
+    sudo yum -y install maven
+    # cd  ~
     # wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
     # sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
     # sudo yum -y install mysql-server
