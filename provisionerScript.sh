@@ -79,10 +79,11 @@
 
     sudo yum -y install git
     sudo yum -y install maven
-    wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
-    sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
-    sudo yum -y install mysql-server
-    sudo systemctl start mysqld
-    sudo grep 'temporary password' /var/log/mysqld.log
+    # cd  ~
+    # wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+    # sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
+    # sudo yum -y install mysql-server
+    # sudo systemctl start mysqld
+    # sudo grep 'temporary password' /var/log/mysqld.log
     # sudo mysql_secure_installation
     sudo systemctl stop tomcat.service
