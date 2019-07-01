@@ -36,7 +36,11 @@
                     "volume_type": "gp2",
                     "delete_on_termination": true
                 }
-            ]
+            ],
+            "tags": {
+                "Name": "EC2-AMI-{{isotime  | clean_ami_name}}",
+                "OS_Version": "Centos"
+            }
         }
     ],
     "provisioners": [
