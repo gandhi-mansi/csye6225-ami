@@ -74,6 +74,53 @@ sudo rm -rf /opt/tomcat/webapps/*
 sudo rm -rf /opt/tomcat/work/*
 sudo ls /opt/tomcat/webapps
 
+
+
+
+###### install code deployement agent 
+
+sudo yum -y update
+
+sudo yum -y install ruby 
+
+sudo yum  -y install wget 
+
+cd /home/centos
+
+
+wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
+
+
+
+wget https://bucket-name.s3.region-identifier.amazonaws.com/latest/install
+
+
+chmod +x ./install
+
+
+
+sudo ./install auto 
+
+
+sudo service codedeploy-agent start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 # sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
 # sudo yum -y install mysql-server
