@@ -17,10 +17,16 @@ sudo yum -y install wget
 
 cd ~
 wget http://apache.mirrors.pair.com/tomcat/tomcat-9/v9.0.21/bin/apache-tomcat-9.0.21.tar.gz
-sudo tar -zxvf apache-tomcat-9.0.21.tar.gz -C /opt/tomcat --strip-components=1
+tar -zxvf apache-tomcat-9.0.21.tar.gz
+sudo chmod +x apache-tomcat-9.0.21/bin/*.bat
+sudo rm -f apache-tomcat-9.0.21/bin/*.bat
+sudo ls -l apache-tomcat-9.0.21/bin
+sudo mv apache-tomcat-9.0.21/* /opt/tomcat/
+# sudo tar -zxvf apache-tomcat-9.0.21.tar.gz -C /opt/tomcat --strip-components=1
 sudo rm -r apache-tomcat-9.0.21.tar.gz
 
 cd /opt/tomcat
+sudo ls
 sudo chgrp -R tomcat conf
 sudo chmod g+rwx conf
 sudo chmod -R g+r conf
@@ -45,16 +51,21 @@ Environment=CATALINA_HOME=/opt/tomcat
 Environment=CATALINA_BASE=/opt/tomcat
 Environment='CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC'
 Environment='JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom'
+WorkingDirectory=/opt/tomcat
 ExecStart=/opt/tomcat/bin/startup.sh
 ExecStop=/bin/kill -15 $MAINPID
 User=tomcat
 Group=tomcat
-
+UMask=0007
+RestartSec=10
+Restart=always
 [Install]
 WantedBy=multi-user.target" | sudo tee -a /etc/systemd/system/tomcat.service
 
-sudo systemctl start tomcat.service
-sudo systemctl status tomcat.service
+sudo systemctl daemon-reload
+
+# sudo systemctl start tomcat.service
+# sudo systemctl status tomcat.service
 
 sudo systemctl enable tomcat.service
 
@@ -65,8 +76,8 @@ sudo echo -e "\t<role rolename=\"manager-gui\"/>
 sudo systemctl restart tomcat.service
 
 sudo systemctl stop tomcat.service
-
 sudo systemctl status tomcat.service
+
 sudo su
 sudo chmod -R 777 webapps
 sudo chmod -R 777 work
@@ -74,62 +85,15 @@ sudo rm -rf /opt/tomcat/webapps/*
 sudo rm -rf /opt/tomcat/work/*
 sudo ls /opt/tomcat/webapps
 
-
-
-
-###### install code deployement agent 
-
-sudo yum -y update
-
-sudo yum -y install ruby 
-
-sudo yum  -y install wget 
-
-cd /home/centos
-
-
-wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
-
-
-
-
-chmod +x ./install
-
-
-
-sudo ./install auto 
-
-
-sudo service codedeploy-agent start
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
-# sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
-# sudo yum -y install mysql-server
-# sudo systemctl start mysqld
-# sudo grep 'temporary password' /var/log/mysqld.log
-# sudo mysql_secure_installation
-# sudo systemctl stop tomcat.service
+sudo systemctl start tomcat.service
+sudo systemctl status tomcat.service
 
 # Code deploy agent Installation and Path Setup
-# cd ~
-# sudo yum install ruby
-# wget https://bucket-name.s3.us-east-1.amazonaws.com/latest/install
-# chmod +x ./install
-# sudo ./install auto
+cd ~
+sudo yum -y install ruby
+wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+rm -rf install
+sudo service codedeploy-agent start
+sudo service codedeploy-agent status
