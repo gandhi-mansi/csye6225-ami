@@ -79,11 +79,13 @@
 
     sudo yum -y install git
     sudo yum -y install maven
-    # cd  ~
-    # wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
-    # sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
-    # sudo yum -y install mysql-server
-    # sudo systemctl start mysqld
-    # sudo grep 'temporary password' /var/log/mysqld.log
-    # sudo mysql_secure_installation
+
+    cd ~
+    sudo yum -y install ruby
+    wget https://code-deploy.csye6225-su19-gandhiman.me.s3.us-east-1.amazonaws.com/latest/install
+    chmod +x ./install
+    sudo ./install auto
+    sudo service codedeploy-agent start
+    sudo service codedeploy-agent status
+
     sudo systemctl stop tomcat.service
