@@ -23,7 +23,7 @@ sudo rm -f apache-tomcat-9.0.21/bin/*.bat
 sudo ls -l apache-tomcat-9.0.21/bin
 sudo mv apache-tomcat-9.0.21/* /opt/tomcat/
 # sudo tar -zxvf apache-tomcat-9.0.21.tar.gz -C /opt/tomcat --strip-components=1
-sudo rm -r apache-tomcat-9.0.21.tar.gz
+sudo rm -rf apache-tomcat-9.0.21
 
 cd /opt/tomcat
 sudo ls
