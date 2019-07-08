@@ -1,6 +1,10 @@
 version: 2.1
 jobs:
   build:
+    filters:
+      branches:
+        only:
+          - master
     docker:
       - image: circleci/python:3.6.8-jessie
     steps:
@@ -22,5 +26,4 @@ jobs:
           command: ./packer validate centos-ami-template.json
       - run:
           name: Build AMI
-          command: |
-           ./packer build centos-ami-template.json
+          command: ./packer build centos-ami-template.json
