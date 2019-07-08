@@ -22,4 +22,5 @@ jobs:
         command: ./packer validate centos-ami-template.json
     - run:
         name: Build AMI
-        command: ./packer build centos-ami-template.json
+        command: |
+        ./packer build centos-ami-template.json
