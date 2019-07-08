@@ -37,7 +37,7 @@ sudo chgrp -R tomcat lib
 sudo chmod g+rwx bin
 sudo chmod -R g+r bin
 
-echo "[Unit]
+echo -e "[Unit]
 Description=Apache Tomcat Web Application Container
 Wants=syslog.target network.target
 After=syslog.target network.target
@@ -53,7 +53,7 @@ Environment='CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC'
 Environment='JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom'
 WorkingDirectory=/opt/tomcat
 ExecStart=/opt/tomcat/bin/startup.sh
-ExecStop=/bin/kill -15 $MAINPID
+ExecStop=/bin/kill -15 \$MAINPID
 User=tomcat
 Group=tomcat
 UMask=0007
