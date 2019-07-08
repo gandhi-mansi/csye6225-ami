@@ -45,6 +45,7 @@ After=syslog.target network.target
 
 [Service]
 Type=forking
+SuccessExitStatus=143
 
 Environment=JAVA_HOME=$JAVA_HOME
 Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid
