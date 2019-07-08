@@ -82,10 +82,10 @@
 
     cd ~
     sudo yum -y install ruby
-    wget https://code-deploy.csye6225-su19-gandhiman.me.s3.us-east-1.amazonaws.com/latest/install
+    wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
     chmod +x ./install
     sudo ./install auto
     sudo service codedeploy-agent start
     sudo service codedeploy-agent status
 
-    sudo systemctl stop tomcat.service
+    #sudo systemctl stop tomcat.service
