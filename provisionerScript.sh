@@ -55,7 +55,7 @@ Environment='CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC'
 Environment='JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom'
 WorkingDirectory=/opt/tomcat
 ExecStart=/opt/tomcat/bin/startup.sh
-ExecStop=/opt/tomcat/bin/shutdown.sh
+ExecStop=/bin/kill -15 \$MAINPID
 User=tomcat
 Group=tomcat
 UMask=0007
