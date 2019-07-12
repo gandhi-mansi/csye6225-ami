@@ -23,7 +23,8 @@ sudo rm -f apache-tomcat-9.0.21/bin/*.bat
 sudo ls -l apache-tomcat-9.0.21/bin
 sudo mv apache-tomcat-9.0.21/* /opt/tomcat/
 # sudo tar -zxvf apache-tomcat-9.0.21.tar.gz -C /opt/tomcat --strip-components=1
-sudo rm -r apache-tomcat-9.0.21.tar.gz
+sudo rm -rf apache-tomcat-9.0.21
+sudo rm -rf apache-tomcat-9.0.21.tar.gz
 
 cd /opt/tomcat
 sudo ls
@@ -37,14 +38,15 @@ sudo chgrp -R tomcat lib
 sudo chmod g+rwx bin
 sudo chmod -R g+r bin
 
-echo "[Unit]
+
+
+echo -e "[Unit]
 Description=Apache Tomcat Web Application Container
 Wants=syslog.target network.target
 After=syslog.target network.target
-
 [Service]
 Type=forking
-
+SuccessExitStatus=143
 Environment=JAVA_HOME=$JAVA_HOME
 Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid
 Environment=CATALINA_HOME=/opt/tomcat
@@ -53,7 +55,7 @@ Environment='CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC'
 Environment='JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom'
 WorkingDirectory=/opt/tomcat
 ExecStart=/opt/tomcat/bin/startup.sh
-ExecStop=/bin/kill -15 $MAINPID
+ExecStop=/bin/kill -15 \$MAINPID
 User=tomcat
 Group=tomcat
 UMask=0007
@@ -95,5 +97,8 @@ wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
 chmod +x ./install
 sudo ./install auto
 rm -rf install
+
+
+#checking status of code deploy agent 
 sudo service codedeploy-agent start
 sudo service codedeploy-agent status
