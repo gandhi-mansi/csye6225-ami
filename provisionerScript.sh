@@ -42,11 +42,9 @@ echo -e "[Unit]
 Description=Apache Tomcat Web Application Container
 Wants=syslog.target network.target
 After=syslog.target network.target
-
 [Service]
 Type=forking
 SuccessExitStatus=143
-
 Environment=JAVA_HOME=$JAVA_HOME
 Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid
 Environment=CATALINA_HOME=/opt/tomcat
@@ -97,5 +95,6 @@ wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
 chmod +x ./install
 sudo ./install auto
 rm -rf install
+
 sudo service codedeploy-agent start
 sudo service codedeploy-agent status
