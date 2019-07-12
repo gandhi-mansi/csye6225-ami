@@ -38,6 +38,8 @@ sudo chgrp -R tomcat lib
 sudo chmod g+rwx bin
 sudo chmod -R g+r bin
 
+
+
 echo -e "[Unit]
 Description=Apache Tomcat Web Application Container
 Wants=syslog.target network.target
@@ -96,5 +98,7 @@ chmod +x ./install
 sudo ./install auto
 rm -rf install
 
+
+#checking status of code deploy agent 
 sudo service codedeploy-agent start
 sudo service codedeploy-agent status
