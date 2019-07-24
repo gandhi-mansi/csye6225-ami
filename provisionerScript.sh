@@ -144,11 +144,11 @@ sudo echo -e "{
             }
         }
     }
-}" | sudo tee -a /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json
+}" | sudo tee -a /opt/amazon-cloudwatch-agent.json
 
-# Configuring CloudWatch Agent
-sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config \
--m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json
+# # Configuring CloudWatch Agent
+# sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config \
+# -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json
 
 # CloudWatch Service File
 cd ~
@@ -156,6 +156,6 @@ sudo wget -q https://s3.amazonaws.com/configfileforcloudwatch/amazon-cloudwatch-
 sudo cp amazon-cloudwatch-agent.service /etc/systemd/system/
 sudo systemctl enable amazon-cloudwatch-agent
 
-sudo systemctl start amazon-cloudwatch-agent
-sudo systemctl status amazon-cloudwatch-agent
-echo "done"
+# sudo systemctl start amazon-cloudwatch-agent
+# sudo systemctl status amazon-cloudwatch-agent
+# echo "done"
