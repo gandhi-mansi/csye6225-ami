@@ -99,6 +99,13 @@ rm -rf install
 sudo service codedeploy-agent start
 sudo service codedeploy-agent status
 
+# creating csye6225.log in /opt/tomcat/logs
+touch csye6225.log
+sudo chgrp -R tomcat csye6225.log
+sudo chmod -R g+r csye6225.log
+sudo chmod g+x csye6225.log
+sudo mv csye6225.log /opt/tomcat/logs/csye6225.log
+
 # CloudWatch Agent Installation
 cd ~
 wget -q https://s3.us-east-1.amazonaws.com/amazoncloudwatch-agent-us-east-1/centos/amd64/latest/amazon-cloudwatch-agent.rpm
@@ -142,22 +149,13 @@ sudo echo -e "{
 # Configuring CloudWatch Agent
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config \
 -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json
+
 # CloudWatch Service File
-sudo echo -e "[Unit]
-Description=Amazon CloudWatch Agent
-After=network.target
+cd ~
+sudo wget -q https://s3.amazonaws.com/configfileforcloudwatch/amazon-cloudwatch-agent.service
+sudo cp amazon-cloudwatch-agent.service /etc/systemd/system/
+sudo systemctl enable amazon-cloudwatch-agent
 
-[Service]
-Type=simple
-ExecStart=/opt/aws/amazon-cloudwatch-agent/bin/start-amazon-cloudwatch-agent
-ExecStop=/bin/kill -15 \$MAINPID
-KillMode=process
-Restart=on-failure
-RestartSec=60s
-
-[Install]
-WantedBy=multi-user.target" | sudo tee -a /etc/systemd/system/cloudwatch.service
-sudo systemctl daemon-reload
-sudo systemctl enable cloudwatch.service
-
-sudo systemctl start cloudwatch
+sudo systemctl start amazon-cloudwatch-agent
+sudo systemctl status amazon-cloudwatch-agent
+echo "done"
