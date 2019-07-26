@@ -99,6 +99,64 @@ sudo ./install auto
 rm -rf install
 
 
-#checking status of code deploy agent 
+#checking status of code deploy agent
 sudo service codedeploy-agent start
 sudo service codedeploy-agent status
+
+
+
+#for json  file
+cd ~
+
+touch cloudwatch-config.json
+
+cat > cloudwatch-config.json << EOF
+{
+    "agent": {
+        "metrics_collection_interval": 10,
+        "logfile": "/var/log/aws/amazon-cloudwatch-agent/amazon-cloudwatch-agent.log"
+    },
+    "logs": {
+        "logs_collected": {
+            "files": {
+                "collect_list": [
+                    {
+                        "file_path": "/opt/tomcat/logs/csye6225.log",
+                        "log_group_name": "csye6225_su2019",
+                        "log_stream_name": "webapp",
+                        "timestamp_format": "%H:%M:%S %y %b %-d",
+                        "timestamp": "UTC"
+                    }
+                ]
+            }
+        },
+        "log_stream_name": "cloudwatch_log_stream"
+    },
+   "metrics":{
+      "metrics_collected":{
+         "statsd":{
+            "service_address":":8125",
+            "metrics_collection_interval":10,
+            "metrics_aggregation_interval":0
+         }
+      }
+   }
+
+}
+EOF
+
+sudo mv cloudwatch-config.json /opt/cloudwatch-config.json
+
+touch csye6225.log
+sudo chgrp -R tomcat csye6225.log
+sudo chmod -R g+r csye6225.log
+sudo chmod g+x csye6225.log
+sudo mv csye6225.log /opt/tomcat/logs/csye6225.log
+
+## Cloud Watch agent
+
+wget https://s3.us-east-1.amazonaws.com/amazoncloudwatch-agent-us-east-1/centos/amd64/latest/amazon-cloudwatch-agent.rpm
+#Install the Package
+sudo rpm -U ./amazon-cloudwatch-agent.rpm
+#Start the cloudwatch agent
+sudo systemctl enable amazon-cloudwatch-agent
