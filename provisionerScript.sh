@@ -114,7 +114,7 @@ cat > cloudwatch-config.json << EOF
 {
     "agent": {
         "metrics_collection_interval": 10,
-        "logfile": "/var/log/aws/amazon-cloudwatch-agent/amazon-cloudwatch-agent.log"
+        "logfile": "/var/logs/amazon-cloudwatch-agent.log"
     },
     "logs": {
         "logs_collected": {
@@ -124,8 +124,7 @@ cat > cloudwatch-config.json << EOF
                         "file_path": "/opt/tomcat/logs/csye6225.log",
                         "log_group_name": "csye6225_su2019",
                         "log_stream_name": "webapp",
-                        "timestamp_format": "%H:%M:%S %y %b %-d",
-                        "timestamp": "UTC"
+                        "timestamp_format": "%H:%M:%S %y %b %-d"
                     }
                 ]
             }
