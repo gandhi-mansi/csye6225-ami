@@ -99,7 +99,6 @@ rm -rf install
 sudo service codedeploy-agent start
 sudo service codedeploy-agent status
 
-<<<<<<< HEAD
 
 #creating json file
 cd ~
@@ -139,16 +138,13 @@ cat > cloudwatch-config.json << EOF
 }
 EOF
 
-=======
-# creating csye6225.log in /opt/tomcat/logs
->>>>>>> f24b64b5b1a188b4181862d914216b5234b9249b
+
 touch csye6225.log
 sudo chgrp -R tomcat csye6225.log
 sudo chmod -R g+r csye6225.log
 sudo chmod g+x csye6225.log
 sudo mv csye6225.log /opt/tomcat/logs/csye6225.log
 
-<<<<<<< HEAD
 #Installing cloud-watch config agent
 cat cloudwatch-config.json
 sudo mv cloudwatch-config.json /opt/cloudwatch-config.json
@@ -172,52 +168,3 @@ sudo systemctl enable amazon-cloudwatch-agent.service
 
 sudo echo  "Installed everything"
 
-=======
-# CloudWatch Agent Installation
-cd ~
-wget -q https://s3.us-east-1.amazonaws.com/amazoncloudwatch-agent-us-east-1/centos/amd64/latest/amazon-cloudwatch-agent.rpm
-ls
-sudo rpm -U ./amazon-cloudwatch-agent.rpm
-rm -rf amazon-cloudwatch-agent.rpm
-
-# creating amazon-cloudwatch-agent.json file
-sudo echo -e "{
-    \"agent\": {
-        \"metrics_collection_interval\": 10,
-        \"logfile\": \"/opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log\"
-    },
-    \"logs\": {
-        \"logs_collected\": {
-            \"files\": {
-                \"collect_list\": [
-                    {
-                        \"file_path\": \"/opt/tomcat/logs/csye6225.log\",
-                        \"log_group_name\": \"csye6225_su2019\",
-                        \"log_stream_name\": \"webapp\",
-                        \"timestamp_format\": \"%H:%M:%S %y %b %-d\",
-                        \"timezone\": \"UTC\"
-                    }
-                ]
-            }
-        },\
-        \"log_stream_name\": \"cloudwatch_log_stream\"
-    },
-    \"metrics\":{
-        \"metrics_collected\":{
-            \"statsd\":{
-                \"service_address\":\":8125\",
-                \"metrics_collection_interval\":10,
-                \"metrics_aggregation_interval\":0
-            }
-        }
-    }
-}" | sudo tee -a /opt/amazon-cloudwatch-agent.json
-
-# CloudWatch Service File
-cd ~
-sudo wget -q https://s3.amazonaws.com/configfileforcloudwatch/amazon-cloudwatch-agent.service
-sudo cp amazon-cloudwatch-agent.service /etc/systemd/system/
-sudo systemctl enable amazon-cloudwatch-agent
-
-echo "Done------------------------------------------"
->>>>>>> f24b64b5b1a188b4181862d914216b5234b9249b
