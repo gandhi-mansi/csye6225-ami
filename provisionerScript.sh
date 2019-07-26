@@ -158,7 +158,8 @@ cd ~
 
 sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/centos/amd64/latest/amazon-cloudwatch-agent.rpm
 sudo rpm -U ./amazon-cloudwatch-agent.rpm
-sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/cloudwatch-config.json -s
+sudo systemctl status amazon-cloudwatch-agent.service
+
 
 
 cd ~
@@ -166,7 +167,7 @@ cd ~
 sudo wget https://s3.amazonaws.com/configfileforcloudwatch/amazon-cloudwatch-agent.service
 sudo cp amazon-cloudwatch-agent.service /usr/lib/systemd/system/
 sudo systemctl enable amazon-cloudwatch-agent.service
-sudo systemctl start amazon-cloudwatch-agent.service
-sudo systemctl status amazon-cloudwatch-agent.service
+
+
 sudo echo  "Installed everything"
 
