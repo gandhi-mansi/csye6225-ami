@@ -158,5 +158,8 @@ sudo mv csye6225.log /opt/tomcat/logs/csye6225.log
 wget https://s3.us-east-1.amazonaws.com/amazoncloudwatch-agent-us-east-1/centos/amd64/latest/amazon-cloudwatch-agent.rpm
 #Install the Package
 sudo rpm -U ./amazon-cloudwatch-agent.rpm
-#Start the cloudwatch agent
-sudo systemctl enable amazon-cloudwatch-agent
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl \
+    -a fetch-config \
+    -m ec2 \
+    -c file:/opt/cloudwatch-config.json \
+    -s
