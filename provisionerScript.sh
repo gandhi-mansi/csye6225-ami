@@ -120,7 +120,7 @@ cat > cloudwatch-config.json << EOF
             "files": {
                 "collect_list": [
                     {
-                        "file_path": "/opt/tomcat/logs/catalina.out",
+                        "file_path": "/opt/tomcat/logs/csye6225.log",
                         "log_group_name": "csye6225_su2019",
                         "log_stream_name": "webapp"
                     }
