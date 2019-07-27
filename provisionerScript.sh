@@ -99,13 +99,6 @@ rm -rf install
 sudo service codedeploy-agent start
 sudo service codedeploy-agent status
 
-# creating csye6225.log in /opt/tomcat/logs
-touch csye6225.log
-sudo chgrp -R tomcat csye6225.log
-sudo chmod -R g+r csye6225.log
-sudo chmod g+x csye6225.log
-sudo mv csye6225.log /opt/tomcat/logs/csye6225.log
-
 # CloudWatch Agent Installation
 cd ~
 wget -q https://s3.us-east-1.amazonaws.com/amazoncloudwatch-agent-us-east-1/centos/amd64/latest/amazon-cloudwatch-agent.rpm
@@ -153,3 +146,4 @@ sudo cp amazon-cloudwatch-agent.service /etc/systemd/system/
 sudo systemctl enable amazon-cloudwatch-agent
 
 echo "Done------------------------------------------"
+
