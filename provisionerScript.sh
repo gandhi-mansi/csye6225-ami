@@ -99,17 +99,16 @@ rm -rf install
 sudo service codedeploy-agent start
 sudo service codedeploy-agent status
 
-
 #creating json file
 cd ~
 
-touch cloudwatch-config.json
+touch amazon-cloudwatch-agent.json
 
-cat > cloudwatch-config.json << EOF
+cat > amazon-cloudwatch-agent.json << EOF
 {
     "agent": {
         "metrics_collection_interval": 10,
-        "logfile": "/var/logs/amazon-cloudwatch-agent.log"
+        "logfile": "/opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log"
     },
     "logs": {
         "logs_collected": {
@@ -146,14 +145,14 @@ sudo chmod g+x csye6225.log
 sudo mv csye6225.log /opt/tomcat/logs/csye6225.log
 
 #Installing cloud-watch config agent
-cat cloudwatch-config.json
-sudo mv cloudwatch-config.json /opt/cloudwatch-config.json
+cat amazon-cloudwatch-agent.json
+sudo mv amazon-cloudwatch-agent.json /opt/amazon-cloudwatch-agent.json
 
 
 
 cd ~
 
-sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/centos/amd64/latest/amazon-cloudwatch-agent.rpm
+sudo wget -q https://s3.us-east-1.amazonaws.com/amazoncloudwatch-agent-us-east-1/centos/amd64/latest/amazon-cloudwatch-agent.rpm
 sudo rpm -U ./amazon-cloudwatch-agent.rpm
 sudo systemctl status amazon-cloudwatch-agent.service
 
@@ -161,9 +160,9 @@ sudo systemctl status amazon-cloudwatch-agent.service
 
 cd ~
 
-sudo wget https://s3.amazonaws.com/configfileforcloudwatch/amazon-cloudwatch-agent.service
-sudo cp amazon-cloudwatch-agent.service /usr/lib/systemd/system/
-sudo systemctl enable amazon-cloudwatch-agent.service
+sudo wget -q https://s3.amazonaws.com/configfileforcloudwatch/amazon-cloudwatch-agent.service
+sudo cp amazon-cloudwatch-agent.service /etc/systemd/system/
+sudo systemctl enable amazon-cloudwatch-agent
 
 
 sudo echo  "Installed everything"
