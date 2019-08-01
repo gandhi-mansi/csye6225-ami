@@ -166,4 +166,3 @@ sudo systemctl enable amazon-cloudwatch-agent
 
 
 sudo echo  "Installed everything"
-
